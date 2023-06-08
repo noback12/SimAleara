@@ -1,135 +1,111 @@
   /* Estilos para el logotipo */
-  * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
-    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-    outline: none !important;
-    background-repeat: no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+  background-repeat: no-repeat;
 }
-
-  /*
-*{	margin : 0; 
-	padding: 0;
-	box-sizing: border-box;
-
-}*/
 
 a:hover {
     text-decoration: none;
 }
 
 
-  img#logo {
-    width: 150px;
-    margin-top: 20px;
-    float: left;
-  }
+img#logo {
+  width: 150px;
+  margin-top: 20px;
+  float: left;
+}
 
 
-    body {
-      font-family: MuseoSans,Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 20px;
-      background-image: url('images/background2.jpg');
-      background-repeat: repeat;
-      background-size: cover;
-      background-position: center;
-    }
+body {
+  font-family: MuseoSans,Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+  background-image: url('images/background2.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-    h1 {
-      text-align: center;
-      color: 2e2d2d;
-      text-transform: uppercase;
-      font-size: 54px;
-      margin-bottom: 20px;
-      padding : none;
-    }
+h1 {
+  text-align: center;
+  color: 2e2d2d;
+  text-transform: uppercase;
+  font-size: 54px;
+  margin-bottom: 20px;
+  padding : none;
+}
 
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 
-    input[type="text"],
-    input[type="number"],
-    select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-      #recibo {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #edebeb;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-   #recibo h2 {
-      text-align: center;
-      color: #333;
-      text-transform: uppercase;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    #recibo p {
-      margin-bottom: 10px;
-    }
-
- #recibo .detalle {
-      margin-bottom: 15px;
-    }
-
-    #recibo .detalle strong {
-      width: 120px;
-      display: inline-block;
-    }
-
-    #recibo .total {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: right;
-      margin-top: 20px;
-    }
+#recibo {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 table {
-            width: 100%;
-            border-collapse: collapse;
-           display: none; /* Ocultar la tabla inicialmente */
-        }
+  width: 100%;
+  border-collapse: collapse;
+  display:table;
+}
 
-        th, td {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
+th{
+  font-size: 120%;
+  background-color: rgb(177, 211, 255);
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#neto:hover{
+  color:#4caf50;
+  font-size: 150%;
+  font-weight: bolder;
+}
