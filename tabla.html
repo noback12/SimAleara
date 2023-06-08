@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recibo de Sueldo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info span {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+           /* display: none; /* Ocultar la tabla inicialmente */
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        #neto{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function mostrarTabla() {
+            var tabla = document.getElementById("tablaRecibo");
+            tabla.style.display = "table"; // Mostrar la tabla
+        }
+    </script>
+</head>
+<body>
+    <h1>Recibo de Sueldo</h1>
+
+    <div class="info">
+        <span>Nombre:</span> Juan Pérez<br>
+        <span>DNI:</span> 12345678<br>
+        <span>Fecha de emisión:</span> 1 de junio de 2023
+    </div>
+
+    <button onclick="mostrarTabla()">Mostrar Recibo</button>
+
+    <table id="tablaRecibo">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>Detalle</th>
+                <th>Remunerativo</th>
+                <th>NO Remunerativo</th>
+                <th>Descuentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Categoria</td>
+                <td>Asistente tecnico</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sueldo básico</td>
+                <td>-</td>
+                <td>156115.82</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Antiguedad</td>
+                <td>%1 * 4</td>
+                <td>6244.63</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Presentismo</td>
+                <td>%5</td>
+                <td>7805.79</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ad puntualidad</td>
+                <td>%10</td>
+                <td>15611.58</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ad por permanencia</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fallo categoria</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>horas nocturnas</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>feriados</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ajuste categoria</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Alimentacion</td>
+                <td></td>
+                <td></td>
+                <td>26000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Monto NO remunerativo aleara</td>
+                <td></td>
+                <td></td>
+                <td>27549.85</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jubilacion</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>21252.98</td>
+            </tr>
+            <tr>
+                <td>Ley 19032</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>5796.27</td>
+            </tr>
+            <tr>
+                <td>obra social</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>5796.27</td>
+            </tr>
+            <tr>
+                <td>Aleara</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>4415.18</td>
+            </tr>
+            <tr>
+                <td>mutual</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>Subtotal</td>
+                <td></td>
+                <td>Rem</td>
+                <td>No rem</td>
+                <td>Desc</td>
+            </tr>
+            <tr id="neto">
+                <td>TOTAL NETO</td>
+                <td></td>
+                <td colspan="3" >209898.00</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
