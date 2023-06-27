@@ -48,7 +48,8 @@ h1 {
 }
 
 form {
-  max-width: 400px;
+  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
@@ -57,8 +58,10 @@ form {
 }
 
 label {
-  display: block;
+  display:  inline-block;
   margin-bottom: 10px;
+  cursor: pointer;
+  
 }
 
 input[type="text"],
@@ -68,6 +71,21 @@ select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  /* Estilos personalizados aquí */
+  /* Ejemplo de estilos */
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+#ingreso{
+  display: none;
+
 }
 
 input[type="submit"] {
@@ -82,6 +100,7 @@ input[type="submit"] {
 
 #recibo {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #f8f5f5;
   border-radius: 5px;
