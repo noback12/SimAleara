@@ -1,0 +1,29 @@
+fetch assoc lee una fila y pasa a la siguiente , esta pensado para hacer un while
+
+mysqli_num_rows($objetodelaquery) muestra en int cuantas filas devolvio la querry 
+
+mysqli_error($objetodelaquerry); es para saber los errores 
+
+
+Hacer checklist de inyecciones:
+chequear manual:php.net  // owasp.org/www-community/attacks/SQL_Injection
+Numeros {que exista(isset) 
+	que sea numero(continua)
+		caso enteros positivos:
+		-if(!ctype_digit($usuario_id) ) die ("error");
+		caso floats:
+		-if(!is_numeric($dinero))die("error");	
+	rango(de ser posible) 
+	}
+Strings {que exista(isset)
+	tamaño minimo(strlen) 
+	tamaño maximo(substr)
+	escapar comillas(continua)
+		escapo las comillas 
+		ej and pass =or 1 =1 se convierte en and pass=\'or \'1'='\1';
+		$pass=mysqli_escape_string($cn,$pass);
+
+	comodines SQL(str_replace)
+		$busq=str_replace("%","\%",$busq);
+		$busq=str_replace("_","\_",$busq);
+	}
