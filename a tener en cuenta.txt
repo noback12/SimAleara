@@ -1,3 +1,5 @@
+La primera linea de los controladores siempre es incluir fw 
+
 fetch assoc lee una fila y pasa a la siguiente , esta pensado para hacer un while
 
 mysqli_num_rows($objetodelaquery) muestra en int cuantas filas devolvio la querry 
