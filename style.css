@@ -24,12 +24,6 @@ strong {
 }
 
 
-/*img#logo {
-  width: 150px;
-  margin-top: 20px;
-  float: left;
-}*/
-
 
 /*Body*/
 
@@ -48,14 +42,6 @@ div {
 
 div, input {
     box-sizing: border-box;
-}
-
-body {
- /* font-family: MuseoSans,Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 20px;*/
- 
 }
 
 h1 {
@@ -79,7 +65,6 @@ label {
 input[type="text"],
 input[type="number"],
 select {
-  /*width: 100%;*/
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -100,8 +85,8 @@ input[type="month"]{
 
 #ingreso{
   display: none;
-
 }
+
 
 input[type="submit"] {
   width: 100%;
@@ -114,7 +99,7 @@ input[type="submit"] {
 }
 
 #formularioRecibo{
-  font-size: 20px;
+  font-size: 120%;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;

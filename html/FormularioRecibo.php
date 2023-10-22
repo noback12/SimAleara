@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../style.css">
     <title>Simulador de Recibos de Sueldo Bingo Ciudadela</title>
-    <script src="script.js"></script>   
+    <script  src="../SimAleara.js" ></script> 
   </head>
  <body>
    <div class="fondo-header">
     <header>
-      <a class="logo" href="/">
+      <a class="logo" href="https://www.aleara.com.ar/">
         <img title="ALEARA" src="../img/logo.png">
         <div class="texto"></div>
       </a>
@@ -41,25 +41,19 @@
       </div>
     </header>
   </div>
+
+
+
   <!-- Formulario para simular recibo de bingo -->
   <main class="fondo-cuerpo">
     <section class="cuerpo">
       <div class="cabecera">
         <div class="divisor">   </div>
-           <h1>Simular Recibo de Sueldo de Bingo</h1>  
+           <h1>Simular Recibo de Sueldo</h1>  
      </div>
     <form id="formularioRecibo" action="" method="get">
     <!--Por ahora lo dejo asi , tengo que hacer que por php se autocomplete con todas las categorias -->
-    <label for="categoria">Categoria:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="01">Asistente Tecnico</option>
-        <option value="02">Auxiliar tecnico </option>
-        <option value="03">Auxiliar Contable</option>
-        <option value="04">Promotor</option>
-        <option value="05">Cajero</option>
-        <option value="06">Limpieza</option>
-        <option value="07">Supervisor</option>
-      </select>
+    
 
      <label for="FIngreso">Fecha de ingreso:</label>
      <input type="month" id="FIngreso" name="FIngreso">
@@ -91,18 +85,21 @@
       </select>
     </div>
     <br><br>
-    <label><input type="checkbox" id="permPuesto" value="permPuesto" >    Ad. permanencia</label>
-    <label><input type="checkbox" id="puntualidad" value="puntualidad"checked>    Ad. asist y puntualidad</label>
-    <label><input type="checkbox" id="presentismo" value="presentismo"checked>  Ad. Presentismo</label><br>
-
+    
     <label for="feriados">Feriados:</label>
     <input type="number" id="feriados" name="feriados"
        min="0" max="31" value=0><br><br>
 
-    <label for="alimentacion">Dias de Alimentacion (0-31):</label>
-    <input type="number" id="alimentacion" name="alimentacion"
-       min="0" max="31" value="21"><br><br>
+    <label>Seleccionar si trabaja en Bingo o Lotería:</label><br>
+    <input type="radio" id="bingo" name="juego" value="bingo" onclick="mostrarFormulario()" required> Bingo
+    <input type="radio" id="loteria" name="juego" value="loteria" onclick="mostrarFormulario()"> Lotería<br><br>
 
+    <div id="extension">
+        <p></p>
+        <!-- El formulario se agregará aquí dinámicamente -->
+    </div><br><br>
+
+    
     <input type="checkbox" id="mutual" value="mutual"><label>Mutual</label><br>
     <label for="ajustes">Ajustes:</label>
     <input type="number" id="ajustes" name="ajustes"><br><br>
@@ -122,7 +119,7 @@
 				<footer>
 					<div class="informacion group">
 						<div class="primera col">
-							<div class="logo"><a href="/"><img title="ALEARA" src="../img/footer/logo.png"></a></div>
+							<div class="logo"><a href="https://www.aleara.com.ar/"><img title="ALEARA" src="../img/footer/logo.png"></a></div>
 							<div class="info">
 								<p>
 									<span>Alsina 946/48, C1088AAB
@@ -180,5 +177,5 @@ Defensa Civil: 103</p>
 			</div>
 
 
-  
+ 
 </body>

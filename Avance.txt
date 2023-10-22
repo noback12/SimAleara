@@ -1,0 +1,12 @@
+22/10 
+*Agregue una caratula mas estetica con los mismos datos que ya teniamos
+*Saque "datos" e "informacion" del diagrama de contexto porque son conceptos genericos
+*Corregi algunas palabras que estaban mal y acomode las flechas del diagrama de casos de usos, no modifique nada. 
+*Agregue las descripciones de los casos de usos : 
+	CU01 ; CU02
+*Agregue un estilo a la duracion de tareas para que sea mas facil de visualizar  
+*Diagramas Gantt y PERT incorporados 
+*Hice una pantalla usando HTML , CSS y javascript para mostrar el formulario que obtiene los datos para formular el recibo , el javascript es para desplegar los items propios de bingo O de loteria segun elija el usuario 
+*hice una pantalla usando HTML y Css para mostrar como quedaria un recibo simulado de bingo 
+
+øøøNinguna de las pantallas esta relacionada con base de datos , por lo cual son estaticas no simulan realmente nada solo son diseños 

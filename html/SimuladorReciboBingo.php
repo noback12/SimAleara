@@ -9,7 +9,7 @@
  <body>
    <div class="fondo-header">
     <header>
-      <a class="logo" href="/">
+      <a class="logo" href="https://www.aleara.com.ar/">
         <img title="ALEARA" src="../img/logo.png">
         <div class="texto"></div>
       </a>
@@ -209,7 +209,7 @@
 				<footer>
 					<div class="informacion group">
 						<div class="primera col">
-							<div class="logo"><a href="/"><img title="ALEARA" src="../img/footer/logo.png"></a></div>
+							<div class="logo"><a href="https://www.aleara.com.ar/"><img title="ALEARA" src="../img/footer/logo.png"></a></div>
 							<div class="info">
 								<p>
 									<span>Alsina 946/48, C1088AAB
