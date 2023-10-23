@@ -1,12 +1,17 @@
-22/10 
+22/10 -23/10
 *Agregue una caratula mas estetica con los mismos datos que ya teniamos
 *Saque "datos" e "informacion" del diagrama de contexto porque son conceptos genericos
-*Corregi algunas palabras que estaban mal y acomode las flechas del diagrama de casos de usos, no modifique nada. 
-*Agregue las descripciones de los casos de usos : 
-	CU01 ; CU02
+*Corregi algunas palabras que estaban mal y acomode las flechas del diagrama de casos de usos, agregue extends en "actualizar sueldo" para diferenciar que se puede modificar el sueldo porcentualmenet EJ: un aumento de 10% o agregar un monto fijo EJ: un bono de $10.000 seria lo mismo para todas las categorias 
+*Agregue las descripciones de los casos de usos 
 *Agregue un estilo a la duracion de tareas para que sea mas facil de visualizar  
 *Diagramas Gantt y PERT incorporados 
 *Hice una pantalla usando HTML , CSS y javascript para mostrar el formulario que obtiene los datos para formular el recibo , el javascript es para desplegar los items propios de bingo O de loteria segun elija el usuario 
 *hice una pantalla usando HTML y Css para mostrar como quedaria un recibo simulado de bingo 
+*Caso de uso 03 , sumaria muchisimo que si los formularios se suben en formato PDF que el camino alternativo sea dar la opcion de descargar esos pdfs.
 
 øøøNinguna de las pantallas esta relacionada con base de datos , por lo cual son estaticas no simulan realmente nada solo son diseños 
+
+Consultar 
+-como se pondrian los puntos de extension en los casos de uso C02 y C06 ?
+-No remunerativo y basicos son dos casos de usos diferentes ? 
+-Porcentaje y suma fija son casos de usos diferentes ? 
