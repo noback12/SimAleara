@@ -5,7 +5,7 @@ function mostrarFormulario() {
 
     if (juegoBingo.checked) {
         extensionDiv.innerHTML = `
-            <label for="categoria">Categoria:</label>
+            <br><label for="categoria">Categoria:</label>
       <select id="categoria" name="categoria" required>
         <option value="01">Asistente Tecnico</option>
         <option value="02">Auxiliar tecnico </option>
@@ -23,16 +23,16 @@ function mostrarFormulario() {
 
       <label for="alimentacion">Dias de Alimentacion (0-31):</label>
     <input type="number" id="alimentacion" name="alimentacion"
-       min="0" max="31" value="21"><br><br>
+       min="0" max="31" value="21">
         `;
     } else if (juegoLoteria.checked) {
         extensionDiv.innerHTML = `
-        <label for="categoria">Categoria:</label>
+        <br><label for="categoria">Categoria:</label>
            <select id="categoria" name="categoria" required>
                 <option value="01">categoria 1</option>
                 <option value="02">categoria 2</option>
                 <option value="03">categoria 3</option>
-            </select>
+            </select> &nbsp&nbsp&nbsp 
             <label for="jornada">Jornada:</label>
             <select  id="jornada" name="jornada" size="1">
                 <option selected="selected" value="Completa">48 Horas</option>
@@ -49,47 +49,17 @@ function mostrarFormulario() {
                 <option value="22"> 22 horas </option>
                 <option value="21"> 21 horas </option>
                 <option value="20"> 20 horas </option>                          
-            </select>
+            </select><br><br>
+            <label for="horas50">Hs. extra Lunes a Viernes:</label>
+            <input type="number" id="horas50" name="horas50"
+            min="0" max="50" value=0><br>
+            <label for="horas100">Hs. extra Sabados , Domingos y Feriados:</label>
+            <input type="number" id="horas100" name="horas100"
+            min="0" max="50" value=0>
         `;
     }
 }
 
-/*function mostrarFormulario() {
-    var juego = document.getElementById('juego').value;
-    var extensionDiv = document.getElementById('extension');
-
-    if (juego === 'bingo') {
-        extensionDiv.innerHTML = `
-            <label for="categoria">Categoria:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="01">Asistente Tecnico</option>
-        <option value="02">Auxiliar tecnico </option>
-        <option value="03">Auxiliar Contable</option>
-        <option value="04">Promotor</option>
-        <option value="05">Cajero</option>
-        <option value="06">Limpieza</option>
-        <option value="07">Supervisor</option>
-      </select><br><br>
-
-      <label><input type="checkbox" id="permPuesto" value="permPuesto" >    Ad. permanencia</label>
-    <label><input type="checkbox" id="puntualidad" value="puntualidad"checked>    Ad. asist y puntualidad</label>
-    <label><input type="checkbox" id="presentismo" value="presentismo"checked>  Ad. Presentismo</label><br>
-
-
-      <label for="alimentacion">Dias de Alimentacion (0-31):</label>
-    <input type="number" id="alimentacion" name="alimentacion"
-       min="0" max="31" value="21"><br><br>
-
-        `;
-    } else if (juego === 'loteria') {
-        extensionDiv.innerHTML = `
-            <label for="numeroLoteria">6. Ingresar el número de Lotería:</label><br>
-            <input type="text" id="numeroLoteria" name="numeroLoteria"><br><br>
-        `;
-    }
-}
-
-*/
 
 function obtenerFecha() {
     // Obtener el valor de la fecha

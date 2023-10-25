@@ -42,8 +42,6 @@
     </header>
   </div>
 
-
-
   <!-- Formulario para simular recibo de bingo -->
   <main class="fondo-cuerpo">
     <section class="cuerpo">
@@ -53,8 +51,6 @@
      </div>
     <form id="formularioRecibo" action="" method="get">
     <!--Por ahora lo dejo asi , tengo que hacer que por php se autocomplete con todas las categorias -->
-    
-
      <label for="FIngreso">Fecha de ingreso:</label>
      <input type="month" id="FIngreso" name="FIngreso">
     <br><br>
@@ -66,7 +62,6 @@
           <option value="<?=$i?>"><?=$i?></option> 
           <?php } ?>
       </select>
-
 
       <label for="mes">Mes:</label>
       <select id="mes" name="mes" required>
@@ -84,21 +79,19 @@
         <option value="12">DICIEMBRE</option>
       </select>
     </div>
-    <br><br>
-    
+    <br>    
     <label for="feriados">Feriados:</label>
     <input type="number" id="feriados" name="feriados"
-       min="0" max="31" value=0><br><br>
+       min="0" max="31" value=0><br>
 
-    <label>Seleccionar si trabaja en Bingo o Lotería:</label><br>
+    <br><label>Seleccionar si trabaja en Bingo o Lotería:</label><br>
     <input type="radio" id="bingo" name="juego" value="bingo" onclick="mostrarFormulario()" required> Bingo
-    <input type="radio" id="loteria" name="juego" value="loteria" onclick="mostrarFormulario()"> Lotería<br><br>
+    <input type="radio" id="loteria" name="juego" value="loteria" onclick="mostrarFormulario()"> Lotería<br>
 
     <div id="extension">
         <p></p>
         <!-- El formulario se agregará aquí dinámicamente -->
-    </div><br><br>
-
+    </div><br>
     
     <input type="checkbox" id="mutual" value="mutual"><label>Mutual</label><br>
     <label for="ajustes">Ajustes:</label>
@@ -175,7 +168,4 @@ Defensa Civil: 103</p>
 					<div class="nota">SINDICATO DE TRABAJADORES DE JUEGOS DE AZAR, ENTRETENIMIENTO, ESPARCIMIENTO, RECREACIÓN Y AFINES DE LA REPÚBLICA ARGENTINA - PERSONERÍA GREMIAL 1529. ADHERIDO A LA CGT.</div>
 				</footer>
 			</div>
-
-
- 
 </body>
