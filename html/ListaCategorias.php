@@ -3,20 +3,29 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<style>
- 		 <?php include "style.css" ?>
- 		</style>
+ 	<link rel="stylesheet" href="../style.css"> 		
 	<title>Lista Categorias</title>
 </head>
 <body>
-	<h1>Lista Categorias</h1>
+    <!--incluyo el header oficial-->
+    <?php include '../views/HeaderAleara.php'; ?>
+    <!--distintivo de usuario adminstrador-->
+    <?php include '../views/AdminBar.php'; ?>
 
-    <table>
-        <tr><th>ID</th><th>Descripcion</th></tr>
-        <?php foreach($this->categorias as $c){ ?>
-            <tr><td><?= $c['id_cat'] ?> </td>  <td><?= $c['descripcion'] ?>  </td> </tr>
-        <?php } ?>
-    </table>
+    <main class="fondo-cuerpo">
+        <section class="cuerpo">
+            <div class="cabecera">
+                <div class="divisor">   </div>
+                <h1>Lista Categorias</h1>
+            </div>
+            <table id="lista">
+                <tr><th>ID</th><th>Descripcion</th><th>%Fallo</th><th> Sector</th></tr>
+                <?php foreach($this->categorias as $c){ ?>
+                    <tr><td><?= $c['Id_Categoria'] ?> </td>  <td><?= $c['descripcion'] ?>  </td> <td><?= $c['fallo'] ?>% <td><?= $c['Nombre_Sector'] ?>  </td>  </td></tr>
+                <?php } ?>
+            </table>
+        </section>
+  </main>
 </body>
 </html>
 

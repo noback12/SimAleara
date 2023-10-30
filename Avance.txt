@@ -9,9 +9,41 @@
 *hice una pantalla usando HTML y Css para mostrar como quedaria un recibo simulado de bingo 
 *Caso de uso 03 , sumaria muchisimo que si los formularios se suben en formato PDF que el camino alternativo sea dar la opcion de descargar esos pdfs.
 
-øøøNinguna de las pantallas esta relacionada con base de datos , por lo cual son estaticas no simulan realmente nada solo son diseños 
+27/10
 
-Consultar 
--como se pondrian los puntos de extension en los casos de uso C02 y C06 ?
--No remunerativo y basicos son dos casos de usos diferentes ? 
--Porcentaje y suma fija son casos de usos diferentes ? 
+* Complete el DER 
+*Armes las tablas como serian las BD
+*Arme las bases de datos en PHPMyadmin , probe y funcionan 
+*Cambie el orden de la lista de tareas para que quede secuencialmentey agregue las que faltan  
+*Arregle el GANTT 
+
+28/10 
+*Modifique la especificacion de los casos de uso ,saque las tablas de las especificaciones para actualizar sueldo y las puse como alternativas .
+(queda la duda si se puede poner actualizar basico y no remunerativo como casos de usos distintos aunque serian en escencia lo mismo ) 
+*Agregue un archivo PHP en las views para referenciar los headers de ahi 
+*Agregue un archuivo PHP en las views para referenciar los footer de ahi
+*Modifique el model de categorias y la view para que muestre a que sector pertenece 
+Formulario de recibo
+-El formulario ya abre desde el controler
+-Completa las categorias con las agregadas en la base de datos 
+
+
+29/10 
+el formulario recibos despliega el contenido segun sector y realiza el _GET hacia simRecibo
+-Se creo Model de conceptos 
+-se creo model de Noremunerativos
+*SimRecibo 
+-Tiene sus controlers 
+-Recibe sueldo basico , categoria , sector ,mes y año de sueldo correctamente
+-Recibe conceptos , tanto su descripcion como su monto y los calcula correctamente 
+-Concerba el Css anterior
+-Calcula la suma de montos Remunerativos correctamente
+-Calcula la suma de descuentos correctamente 
+-Calcula la suma de remunerativos , no remunerativos y descuentos para el neto
+
+
+øøøHay que ver el tema de la carga de PDFs ,si es directo a la base de datos o nomas cargamos links hacia los archivos 
+øøøFaltan las validaciones 
+øøøFaltan lo que acorta las urls 
+
+ 
