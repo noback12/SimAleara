@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2023 a las 01:49:56
+-- Tiempo de generación: 30-10-2023 a las 13:18:44
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -90,9 +90,9 @@ INSERT INTO `conceptos` (`Id_Concepto`, `Nombre_Concepto`, `Monto`) VALUES
 (3, 'Jubiliacion', -11),
 (4, 'Horas Extra 50%', 1.5),
 (5, 'Horas extra 100%', 2),
-(6, 'Ley 19032', 3),
-(7, 'Obra Social', 3),
-(8, 'Aleara', 3),
+(6, 'Ley 19032', -3),
+(7, 'Obra Social', -3),
+(8, 'Aleara', -2),
 (9, 'Dia No trabajado', 30);
 
 -- --------------------------------------------------------
@@ -134,7 +134,9 @@ CREATE TABLE `no_remunerativo` (
 --
 
 INSERT INTO `no_remunerativo` (`Id_NRemunerativo`, `Nombre`, `monto`, `Id_Fecha`) VALUES
-(1, 'Suma Agosto 2023', 26066.3, 1);
+(1, 'Suma Agosto 2023', 26066.3, 2),
+(2, 'Suma NR Julio', 82798.83, 1),
+(3, 'Suma NR Sept', 34576.18, 3);
 
 -- --------------------------------------------------------
 
@@ -173,8 +175,13 @@ CREATE TABLE `se_acordo` (
 INSERT INTO `se_acordo` (`Id_Concepto`, `Id_sector`) VALUES
 (1, 1),
 (1, 2),
+(2, 2),
+(3, 2),
 (4, 1),
-(5, 1);
+(5, 1),
+(6, 2),
+(7, 2),
+(8, 2);
 
 -- --------------------------------------------------------
 
@@ -192,7 +199,9 @@ CREATE TABLE `se_asigna` (
 --
 
 INSERT INTO `se_asigna` (`Id_Categoria`, `Id_NRemunerativo`) VALUES
-(1, 1);
+(1, 1),
+(1, 2),
+(1, 3);
 
 -- --------------------------------------------------------
 
@@ -212,7 +221,9 @@ CREATE TABLE `sueldo_basico` (
 --
 
 INSERT INTO `sueldo_basico` (`Id_Sueldo`, `Sueldo_Basico`, `Id_Categoria`, `Id_fecha`) VALUES
-(1, 345761.77, 1, 1);
+(1, 289029.24, 1, 1),
+(2, 345761.77, 1, 2),
+(3, 371828.07, 1, 3);
 
 --
 -- Índices para tablas volcadas
@@ -298,7 +309,7 @@ ALTER TABLE `fechas`
 -- AUTO_INCREMENT de la tabla `no_remunerativo`
 --
 ALTER TABLE `no_remunerativo`
-  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `sector`
@@ -310,7 +321,7 @@ ALTER TABLE `sector`
 -- AUTO_INCREMENT de la tabla `sueldo_basico`
 --
 ALTER TABLE `sueldo_basico`
-  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
