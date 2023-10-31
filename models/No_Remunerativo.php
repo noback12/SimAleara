@@ -6,8 +6,6 @@
 class No_Remunerativo extends Model{
 
     //FALTAN LAS VALIDACIONES 
-    
-
     public function getTodos(){
         $this->db->query("SELECT * FROM No_Remunerativo");
         return $this->db->fetchAll();
@@ -21,8 +19,6 @@ class No_Remunerativo extends Model{
                             INNER JOIN fechas AS F on F.Id_Fecha = NR.Id_fecha
                             WHERE  C.Id_categoria =$id_categoria AND F.mes =$mes AND F.año = $anio  
 					  ");
-
-
 		return $this->db->fetchAll();
 	}
 	

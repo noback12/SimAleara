@@ -105,7 +105,18 @@ input[type="submit"] {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+#infoRecibo{
+
+    font-size: 120%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.infoStatic{
+    display:inline;
+    color: orange;
 }
 
 #recibo {
@@ -115,6 +126,7 @@ input[type="submit"] {
   background-color: #f8f5f5;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 #lista td{

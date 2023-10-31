@@ -33,3 +33,53 @@ function obtenerFecha() {
     // Escribir el valor de la fecha en el campo de texto
     document.getElementById("ingreso").value = fecha;
   }
+
+/* No me actualiza en el form cambio a un select antiguedad 
+document.addEventListener("DOMContentLoaded", function(){
+document.getElementById('FIngreso').addEventListener('input', restarFechas);
+document.getElementById('anio').addEventListener('change', restarFechas);
+document.getElementById('mes').addEventListener('change', restarFechas);
+});
+
+
+function restarFechas() {
+    var monthInputValue = document.getElementById('FIngreso').value;
+    var yearSelectValue = parseInt(document.getElementById('anio').value);
+    var monthSelectValue = parseInt(document.getElementById('mes').value);
+
+
+      var monthYear = monthInputValue.split('-');
+      var year = parseInt(monthYear[0]);
+      var month = parseInt(monthYear[1]);
+
+      var diffYears = yearSelectValue - year   ;
+      var diffMonths =   monthSelectValue - month;
+
+      if (diffMonths < 0) {
+        diffYears--;
+        diffMonths += 12;
+      }
+
+      var diffMessage = 'Diferencia: ';
+      if (diffYears > 0) {
+        diffMessage += diffYears + (diffYears === 1 ? ' año' : ' años');
+      }
+      if (diffYears && diffMonths) {
+        diffMessage += ' y ';
+      }
+      if (diffMonths > 0) {
+        diffMessage += diffMonths + (diffMonths === 1 ? ' mes' : ' meses');
+      }
+
+    document.getElementById('Antiguedad').innerText = diffYears;
+    // Cambiar el color del texto según el resultado
+      if (diffYears < 0 || (diffYears === 0 && diffMonths < 0)) {
+        Antiguedad.style.color = 'red';
+      } else {
+        Antiguedad.style.color = 'green';
+      }
+
+      // Establecer el valor de resultDiv como valor del campo de formulario oculto
+      document.getElementById('formularioRecibo').setAttribute('action', 'http://localhost:8080/SimAleara/controllers/SimRecibo.php?result=' + diffYears);
+  }
+*/

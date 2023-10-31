@@ -26,7 +26,7 @@
         
         //var_dump($recibo);
         //var_dump($concepts);
-        var_dump($NRemun);
+        //var_dump($NRemun);
 
         //Vista SimRecibo 
         $v = new SimRecibo();
