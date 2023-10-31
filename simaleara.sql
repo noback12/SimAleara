@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2023 a las 13:18:44
+-- Tiempo de generación: 31-10-2023 a las 10:19:15
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `simaleara`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `id_admin` int(11) NOT NULL,
+  `usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(64) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `administradores`
+--
+
+INSERT INTO `administradores` (`id_admin`, `usuario`, `password`) VALUES
+(1, 'martin', 'hash');
 
 -- --------------------------------------------------------
 
@@ -88,12 +107,14 @@ INSERT INTO `conceptos` (`Id_Concepto`, `Nombre_Concepto`, `Monto`) VALUES
 (1, 'Antiguedad', 1),
 (2, 'Presentismo', 5),
 (3, 'Jubiliacion', -11),
-(4, 'Horas Extra 50%', 1.5),
-(5, 'Horas extra 100%', 2),
+(4, 'Horas Extra 50%', 0.75),
+(5, 'Horas extra 100%', 1),
 (6, 'Ley 19032', -3),
 (7, 'Obra Social', -3),
 (8, 'Aleara', -2),
-(9, 'Dia No trabajado', 30);
+(9, 'Dia No trabajado', 30),
+(10, 'Ad. Puntualidad', 10),
+(11, 'Presentismo', 8);
 
 -- --------------------------------------------------------
 
@@ -114,7 +135,8 @@ CREATE TABLE `fechas` (
 INSERT INTO `fechas` (`Id_Fecha`, `mes`, `año`) VALUES
 (1, 7, 2023),
 (2, 8, 2023),
-(3, 9, 2023);
+(3, 9, 2023),
+(4, 1, 2023);
 
 -- --------------------------------------------------------
 
@@ -136,7 +158,9 @@ CREATE TABLE `no_remunerativo` (
 INSERT INTO `no_remunerativo` (`Id_NRemunerativo`, `Nombre`, `monto`, `Id_Fecha`) VALUES
 (1, 'Suma Agosto 2023', 26066.3, 2),
 (2, 'Suma NR Julio', 82798.83, 1),
-(3, 'Suma NR Sept', 34576.18, 3);
+(3, 'Suma NR Sept', 34576.18, 3),
+(4, 'NR 2023 cajero', 35946.4, 4),
+(5, 'Alimentacion ', 900, 4);
 
 -- --------------------------------------------------------
 
@@ -176,12 +200,18 @@ INSERT INTO `se_acordo` (`Id_Concepto`, `Id_sector`) VALUES
 (1, 1),
 (1, 2),
 (2, 2),
+(3, 1),
 (3, 2),
 (4, 1),
 (5, 1),
+(6, 1),
 (6, 2),
+(7, 1),
 (7, 2),
-(8, 2);
+(8, 1),
+(8, 2),
+(10, 2),
+(11, 1);
 
 -- --------------------------------------------------------
 
@@ -201,7 +231,9 @@ CREATE TABLE `se_asigna` (
 INSERT INTO `se_asigna` (`Id_Categoria`, `Id_NRemunerativo`) VALUES
 (1, 1),
 (1, 2),
-(1, 3);
+(1, 3),
+(9, 4),
+(9, 5);
 
 -- --------------------------------------------------------
 
@@ -223,11 +255,19 @@ CREATE TABLE `sueldo_basico` (
 INSERT INTO `sueldo_basico` (`Id_Sueldo`, `Sueldo_Basico`, `Id_Categoria`, `Id_fecha`) VALUES
 (1, 289029.24, 1, 1),
 (2, 345761.77, 1, 2),
-(3, 371828.07, 1, 3);
+(3, 371828.07, 1, 3),
+(4, 103345.9, 9, 4),
+(5, 100000, 26, 4);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indices de la tabla `categorias`
@@ -288,6 +328,12 @@ ALTER TABLE `sueldo_basico`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
@@ -297,19 +343,19 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `conceptos`
 --
 ALTER TABLE `conceptos`
-  MODIFY `Id_Concepto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Id_Concepto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `fechas`
 --
 ALTER TABLE `fechas`
-  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `no_remunerativo`
 --
 ALTER TABLE `no_remunerativo`
-  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `sector`
@@ -321,7 +367,7 @@ ALTER TABLE `sector`
 -- AUTO_INCREMENT de la tabla `sueldo_basico`
 --
 ALTER TABLE `sueldo_basico`
-  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas

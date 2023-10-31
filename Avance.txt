@@ -41,9 +41,24 @@ el formulario recibos despliega el contenido segun sector y realiza el _GET haci
 -Calcula la suma de descuentos correctamente 
 -Calcula la suma de remunerativos , no remunerativos y descuentos para el neto
 
+30/10
+
+-Complete el formulario y recibo de loteria ,
+-agregue el tema de feriados a ambos
+-de horas extras a loteria ,
+-de perder el presentismo en ambos
+-de perder la puntualidad en bingo
+
+
+31/10
+
+Agregue el htaccess
+Pantalla de inicio sesion
+Pantalla menu principal
+
 
 øøøHay que ver el tema de la carga de PDFs ,si es directo a la base de datos o nomas cargamos links hacia los archivos 
 øøøFaltan las validaciones 
-øøøFaltan lo que acorta las urls 
+
 
  
