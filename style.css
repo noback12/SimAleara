@@ -23,6 +23,114 @@ strong {
     font-weight: 900;
 }
 
+/*Menu */
+    #menu{
+           display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+     ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* inicio sesion*/
+
+  
+a:first-letter{
+        text-transform: uppercase;
+}
+
+#admin{
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Márgenes */
+    transition-duration: 0.4s; /* Duración de la transición */
+    cursor: pointer; /* Cursor */
+    border-radius: 12px; /* Radio del borde */
+     position: fixed; /* Posición fija */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    z-index: 1; /* Índice Z para controlar el apilamiento */
+}
+
+#admin:hover {
+    background-color: #45a049; /* Cambio de color de fondo en el hover */
+}
+
+#iniciar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 300px;
+    padding: 40px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+
 
 
 /*Body*/

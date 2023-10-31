@@ -36,7 +36,7 @@
         $v->render();
         }
     else{	
-		header("Location: FormularioRecibo.php");
+		header("Location: formularioRecibo");
 	}
 ?>
 

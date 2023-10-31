@@ -83,3 +83,13 @@ function restarFechas() {
       document.getElementById('formularioRecibo').setAttribute('action', 'http://localhost:8080/SimAleara/controllers/SimRecibo.php?result=' + diffYears);
   }
 */
+ function mostrarCampos() {
+ var campos = document.getElementById("campos");
+        if (campos.style.display === "none") {
+            campos.style.display = "block";
+        } 
+    }
+
+    function iniciarSesion() {
+        // Aquí puedes agregar la lógica para iniciar sesión
+    }

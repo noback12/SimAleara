@@ -1,5 +1,7 @@
-# archivo .htaccess
-
 RewriteEngine on 
 
-RewriteRule ^FormularioRecibo$ controllers/FormularioRecibo.php
+RewriteRule ^inicio$ controllers/MenuPrincipal.php [NC,L]
+RewriteRule ^FormularioRecibo$ controllers/FormularioRecibo.php [NC,L]
+RewriteRule ^SimRecibo$ controllers/SimRecibo.php [NC,L]
+RewriteRule ^Lista-Categorias$ controllers/ListaCategorias.php [NC,L]
+RewriteRule ^InicioSesion$ controllers/InicioSesion.php [NC,L]

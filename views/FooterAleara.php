@@ -3,7 +3,7 @@
     <footer>
         <div class="informacion group">
             <div class="primera col">
-                <div class="logo"><a href="https://www.aleara.com.ar/"><img title="ALEARA" src="../img/footer/logo.png"></a></div>
+                <div class="logo"><a href="https://www.aleara.com.ar/"><img title="ALEARA" src="img/footer/logo.png"></a></div>
                 <div class="info">
                     <p>
                         <span>Alsina 946/48, C1088AAB
@@ -49,10 +49,10 @@ Defensa Civil: 103</p>
 
             <div class="ultima col">
                 <div class="iconos">
-                    <div class="icono"><a href="https://www.facebook.com/Sindicato-Aleara-1151031428266221/"><img title="Facebook" src="../img/footer/facebook.png"></a></div>
-                    <div class="icono"><a href="https://twitter.com/prensaaleara"><img title="Twitter" src="../img/footer/twitter.png"></a></div>
-                    <div class="icono"><a href="https://www.instagram.com/"><img title="Instagram" src="../img/footer/instagram.png"></a></div>
-                    <div class="icono"><a href="/contacto"><img title="Contacto" src="../img/footer/contacto.png"></a></div>
+                    <div class="icono"><a href="https://www.facebook.com/Sindicato-Aleara-1151031428266221/"><img title="Facebook" src="img/footer/facebook.png"></a></div>
+                    <div class="icono"><a href="https://twitter.com/prensaaleara"><img title="Twitter" src="img/footer/twitter.png"></a></div>
+                    <div class="icono"><a href="https://www.instagram.com/"><img title="Instagram" src="img/footer/instagram.png"></a></div>
+                    <div class="icono"><a href="/contacto"><img title="Contacto" src="img/footer/contacto.png"></a></div>
                 </div>
             </div>
         </div>

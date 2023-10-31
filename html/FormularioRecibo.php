@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Simulador de Recibos de Sueldo Bingo Ciudadela</title>
 
     
-    <script  src="../SimAleara.js" ></script> 
+    <script  src="SimAleara.js" ></script> 
   </head>
  <body>
   <!--incluyo el header oficial-->
@@ -20,7 +20,7 @@
         <div class="divisor">   </div>
            <h1>Simular Recibo de Sueldo</h1>  
      </div>
-    <form id="formularioRecibo" action="SimRecibo.php" method="get">
+    <form id="formularioRecibo" action="SimRecibo" method="get">
       <div>
           <label>Periodo de Recibo:</label> 
           <label for="anio">Año:</label>
