@@ -4,12 +4,14 @@
 <head>
 	<meta charset="UTF-8">
  	<link rel="stylesheet" href="style.css"> 		
-	<title>Lista Categorias</title>
+	<title>SimAleara Menu Principal</title>
 
 </head>
 <body>
     <!--incluyo el header oficial-->
     <?php include '../views/HeaderAleara.php'; ?>
+
+
 
 
     <main class="fondo-cuerpo">
@@ -25,19 +27,21 @@
                     <ul>
                     <li><a href="FormularioRecibo">Simular Recibo</a></li>
                     <li><a href="Historico">Historico(falta)</a></li>
-                    <li><a href="Lista-Comunicados">ListaComunicados(falta)</a></li>
-                    <li><a href="Lista-Categorias">ListaCategorias(Admin)</a></li>
+                    <li><a href="Lista-Comunicados">ListaComunicados</a></li>
                     <li><a href="Manual de usuario">Manual De Usuario(falta)</a></li>
-                    
                     </ul>
             </div>
-            <a href="InicioSesion" id="admin">Iniciar sesión como administrador</a>
+
+            <a href="InicioSesion" id="admin">Administrador</a>
 
         </section>
   </main>
+ 
 
+    <!--incluyo mi Nav-->
+    <?php include '../views/Nav.php'; ?>
     <!--incluyo el Footer oficial-->
- <?php include '../views/FooterAleara.php'; ?>
+    <?php include '../views/FooterAleara.php'; ?>
 </body>
 </html>
 

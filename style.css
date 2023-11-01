@@ -28,7 +28,6 @@ strong {
            display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     }
      ul {
@@ -55,6 +54,8 @@ strong {
     color: white;
 }
 
+
+
 /* inicio sesion*/
 
   
@@ -63,26 +64,31 @@ a:first-letter{
 }
 
 #admin{
-    background-color: #4CAF50; /* Color de fondo */
-    border: none; /* Sin borde */
-    color: white; /* Color del texto */
-    padding: 15px 32px; /* Relleno */
-    text-align: center; /* Alineación del texto */
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px; /* Tamaño de fuente */
-    margin: 4px 2px; /* Márgenes */
-    transition-duration: 0.4s; /* Duración de la transición */
-    cursor: pointer; /* Cursor */
+
+     background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100px;
     border-radius: 12px; /* Radio del borde */
      position: fixed; /* Posición fija */
-    bottom: 20px; /* Distancia desde abajo */
-    right: 20px; /* Distancia desde la derecha */
+    bottom: 45px; /* Distancia desde abajo */
+    right: -90px; /* Distancia desde la derecha */
     z-index: 1; /* Índice Z para controlar el apilamiento */
 }
 
+
 #admin:hover {
     background-color: #45a049; /* Cambio de color de fondo en el hover */
+    width: 200px;
+    right:20px;
 }
 
 #iniciar{
@@ -114,8 +120,6 @@ input[type="password"] {
     border-radius: 4px;
 }
 
-
-
 button {
     width: 100%;
     padding: 10px;
@@ -130,8 +134,37 @@ button:hover {
     background: #45a049;
 }
 
+/* NAV */ 
+  
+ nav {
+    background-color:#373535;
+    color: #fff;
+    width: 100%;
+    transition: bottom 0.3s;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+  }
+  nav.scrolled {
+    bottom: 0;
+  }
+  nav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
 
-
+    nav a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  section {
+    padding: 20px;
+    margin-bottom: 40px; /* Ajusta el valor del margen inferior para que no se superponga con el contenido */
+  }
 
 /*Body*/
 
@@ -292,6 +325,7 @@ td.concepto{
 
 section.cuerpo {
     margin: 0 auto;
+    font-size: 20px;
 }
 
 section.cuerpo .cabecera .divisor {
@@ -326,13 +360,36 @@ section.cuerpo .cabecera {
 
 #AdminBar{
     width: 100%;
-    background-color: #5cdb56;
+    background-color: #377c3e;
     color: white;
     text-align: center;
     font-size: 150%;
     font-family: Garamond;
     border-bottom: 6px solid rgb(255, 255, 255);
 }
+
+#AdminBar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+  }
+
+    
+#AdminBar a:hover {
+    background-color: #275c2d;
+    color: #fff;
+  }
+
+  #delete{
+    background-color: red;
+  }
+
+  #delete:hover{
+    background-color: #7d1801;
+    color: #fff;
+  }
 
 /*header de la pagina inicial ALEARA*/
 

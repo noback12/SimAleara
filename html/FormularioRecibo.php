@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Simulador de Recibos de Sueldo Bingo Ciudadela</title>
-
-    
+    <title>Simulador de Recibos de Sueldo</title>
     <script  src="SimAleara.js" ></script> 
   </head>
  <body>
@@ -112,7 +110,9 @@
     <br>
     </section>
   </main>
-
+  
+  <!--incluyo mi Nav-->
+  <?php include '../views/Nav.php'; ?>
  <!--incluyo el Footer oficial-->
  <?php include '../views/FooterAleara.php'; ?>
 </body>

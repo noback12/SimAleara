@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2023 a las 10:19:15
+-- Tiempo de generación: 01-11-2023 a las 09:54:04
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -68,16 +68,16 @@ INSERT INTO `categorias` (`Id_Categoria`, `descripcion`, `fallo`, `Id_Sector`) V
 (8, 'Cadete', 0, 2),
 (9, 'Cajero/a de maquina', 20, 2),
 (10, 'Encargado de limpieza', 0, 2),
-(11, 'Jefe Mesa de Bingo', 0, 2),
+(11, 'Jefe Mesa de Bingo', 20, 2),
 (12, 'Jefe Tecnico', 0, 2),
 (13, 'Limpieza', 0, 2),
 (14, 'Mantenimiento Edilicio', 0, 2),
-(15, 'Mantenimiento Tecnico', 0, 2),
+(15, 'Mantenimiento Tecnico', 25, 2),
 (16, 'Pagador/a', 12, 2),
 (17, 'Promotor/a', 0, 2),
 (18, 'Relaciones Públicas', 0, 2),
 (19, 'Recepcionista', 0, 2),
-(20, 'Recuento', 0, 2),
+(20, 'Recuento', 5, 2),
 (21, 'Secretaria', 0, 2),
 (22, 'Supervisor Tecnico', 0, 2),
 (23, 'Supervisor/a', 0, 2),
@@ -86,6 +86,29 @@ INSERT INTO `categorias` (`Id_Categoria`, `descripcion`, `fallo`, `Id_Sector`) V
 (26, 'Categoria 1 ', 3, 1),
 (27, 'Categoria 2', 0, 1),
 (28, 'Categoria 3', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comunicados`
+--
+
+CREATE TABLE `comunicados` (
+  `Id_Comunicado` int(11) NOT NULL,
+  `Titulo_Comunicado` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  `Direccion` text COLLATE utf8_spanish_ci NOT NULL,
+  `Id_Sector` int(11) NOT NULL DEFAULT 2,
+  `Id_Fecha` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `comunicados`
+--
+
+INSERT INTO `comunicados` (`Id_Comunicado`, `Titulo_Comunicado`, `Direccion`, `Id_Sector`, `Id_Fecha`) VALUES
+(1, 'Comunicado 29 03', 'comunicados/comunicado_29-03[1].pdf', 2, 1),
+(2, 'Participacion en Ganancias', 'comunicados/ParticipacionGanancias.pdf', 2, 1),
+(3, 'Resolucion Homologacion', 'comunicados/ResolucionHomologacion.pdf', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +159,11 @@ INSERT INTO `fechas` (`Id_Fecha`, `mes`, `año`) VALUES
 (1, 7, 2023),
 (2, 8, 2023),
 (3, 9, 2023),
-(4, 1, 2023);
+(4, 1, 2023),
+(5, 1, 2020),
+(6, 1, 2025),
+(7, 2, 2020),
+(8, 7, 2025);
 
 -- --------------------------------------------------------
 
@@ -277,6 +304,12 @@ ALTER TABLE `categorias`
   ADD KEY `Pertenece` (`Id_Sector`);
 
 --
+-- Indices de la tabla `comunicados`
+--
+ALTER TABLE `comunicados`
+  ADD PRIMARY KEY (`Id_Comunicado`);
+
+--
 -- Indices de la tabla `conceptos`
 --
 ALTER TABLE `conceptos`
@@ -337,7 +370,13 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `Id_Categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Id_Categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT de la tabla `comunicados`
+--
+ALTER TABLE `comunicados`
+  MODIFY `Id_Comunicado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `conceptos`
@@ -349,13 +388,13 @@ ALTER TABLE `conceptos`
 -- AUTO_INCREMENT de la tabla `fechas`
 --
 ALTER TABLE `fechas`
-  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `no_remunerativo`
 --
 ALTER TABLE `no_remunerativo`
-  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_NRemunerativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `sector`
@@ -367,7 +406,7 @@ ALTER TABLE `sector`
 -- AUTO_INCREMENT de la tabla `sueldo_basico`
 --
 ALTER TABLE `sueldo_basico`
-  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
@@ -396,15 +435,15 @@ ALTER TABLE `se_acordo`
 -- Filtros para la tabla `se_asigna`
 --
 ALTER TABLE `se_asigna`
-  ADD CONSTRAINT `Categoria` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `NRemunerativo` FOREIGN KEY (`Id_NRemunerativo`) REFERENCES `no_remunerativo` (`Id_NRemunerativo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `Categoria` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `NRemunerativo` FOREIGN KEY (`Id_NRemunerativo`) REFERENCES `no_remunerativo` (`Id_NRemunerativo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `sueldo_basico`
 --
 ALTER TABLE `sueldo_basico`
-  ADD CONSTRAINT `Cobra` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `Incrementa` FOREIGN KEY (`Id_fecha`) REFERENCES `fechas` (`id_fecha`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `Cobra` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `Incrementa` FOREIGN KEY (`Id_fecha`) REFERENCES `fechas` (`id_fecha`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

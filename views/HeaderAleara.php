@@ -1,5 +1,5 @@
 <div class="fondo-header">
-    <header>
+    <header id="header">
       <a class="logo" href="https://www.aleara.com.ar/">
         <img title="ALEARA" src="img/logo.png">
         <div class="texto"></div>

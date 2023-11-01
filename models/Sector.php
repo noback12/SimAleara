@@ -11,6 +11,11 @@ class Sector extends Model{
         return $this->db->fetchAll();
     }
 
+    public function getSector(){
+        $this->db->query("SELECT * FROM sector s ");
+        return $this->db->fetchAll();
+    }
+
     //Para mostrar un recibo 
 	public function getRecibo($id_sector , $id_categoria ,$mes ,$anio){
 		$this->db->query("SELECT DISTINCT   S.Nombre_Sector ,  C.descripcion , SB.Sueldo_basico ,F.Id_Fecha ,F.mes ,F.año ,C.fallo

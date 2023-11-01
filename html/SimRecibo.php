@@ -220,6 +220,8 @@
 
         </section>
   </main>
+  <!--incluyo mi Nav-->
+  <?php include '../views/Nav.php'; ?>
   <!--incluyo el Footer oficial-->
  <?php include '../views/FooterAleara.php'; ?>
 </body>

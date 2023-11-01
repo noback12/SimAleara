@@ -26,6 +26,26 @@ function mostrarOpciones(opcion) {
                 document.getElementById('horas100').disabled = true;
             }
         }
+//Para eliminar no necesito los detalles de un particular
+        function mostrarOpcionesShort(opcion) {
+            if (opcion === 'loteria') {
+               //Muestro la seccion que del radio correspondiente 
+                document.getElementById('especificoBingo').style.display = 'none';
+                document.getElementById('especificoLoteria').style.display = 'Block';
+                // Desabilito los gets de la otra opcion 
+                document.getElementById('select1').disabled = false;
+                document.getElementById('select2').disabled = true;
+
+            } else if (opcion === 'bingo') {
+                //Muestro la seccion que del radio correspondiente 
+                document.getElementById('especificoBingo').style.display = 'block';
+                document.getElementById('especificoLoteria').style.display = 'none';
+                // Desabilito los gets de la otra opcion 
+                document.getElementById('select1').disabled = true;
+                document.getElementById('select2').disabled = false;
+            }
+        }
+        
 function obtenerFecha() {
     // Obtener el valor de la fecha
     var fecha = document.getElementById("fechaInput").value;
@@ -93,3 +113,23 @@ function restarFechas() {
     function iniciarSesion() {
         // Aquí puedes agregar la lógica para iniciar sesión
     }
+
+
+    /*para el nav */
+
+ var nav = document.getElementById("navbar");
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos < currentScrollPos) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
+/* Para mostrar los comunicados  */
+
+

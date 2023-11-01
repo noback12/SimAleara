@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
  	<link rel="stylesheet" href="style.css"> 		
-	<title>Lista Categorias</title>
+	<title>Eliminar Categoria</title>
+    <script  src="SimAleara.js" ></script> 
 </head>
 <body>
     <!--incluyo el header oficial-->
@@ -16,14 +17,20 @@
         <section class="cuerpo">
             <div class="cabecera">
                 <div class="divisor">   </div>
-                <h1>Lista Categorias</h1>
+                <h1>Eliminar Categoria</h1>
             </div>
-            <table id="lista">
-                <tr><th>ID</th><th>Descripcion</th><th>%Fallo</th><th> Sector</th></tr>
-                <?php foreach($this->categorias as $c){ ?>
-                    <tr><td><?= $c['Id_Categoria'] ?> </td>  <td><?= $c['descripcion'] ?>  </td> <td><?= $c['fallo'] ?>% <td><?= $c['Nombre_Sector'] ?>  </td>  </td></tr>
-                <?php } ?>
-            </table>
+            
+            <form action="" method="get">
+                <label> Seleccione categoria a borrar</label> <select name="categorias" id="categorias"> 
+                        <?php foreach($this->sector as $s){?>
+                        <option value="<?= $s['Id_Categoria'] ?>">  <?= $s['descripcion'] ?> - <?= $s['Nombre_Sector']?></option>
+                                <?php }?>
+                    </select><br>
+                
+                <br><br><input id="delete" type="submit" value="Eliminar Categoría">
+            </form>
+
+
         </section>
   </main>
   <!--incluyo mi Nav-->

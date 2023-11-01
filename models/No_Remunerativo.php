@@ -22,6 +22,24 @@ class No_Remunerativo extends Model{
 		return $this->db->fetchAll();
 	}
 	
+    public function agregarUnNoRemunerativo( $nombre,$montoNR,$Id_fecha,$Id_Categoria){
+
+        
+        //Inserto en la tabla No remunerativa
+        $this->db->query("INSERT INTO no_remunerativo (Nombre, monto, Id_Fecha) 
+        VALUES ('$nombre', $montoNR, '$Id_fecha')");
+    //Busco lo que inserte 
+       $query = $this->db->query("SELECT Id_NRemunerativo
+                                         FROM no_remunerativo NR
+                                        WHERE Id_Fecha ='$Id_fecha' AND $montoNR =monto AND '$nombre' = Nombre ");
+        $query = $this->db->fetch();
+    var_dump($query);
+    $noRemun= $query['Id_NRemunerativo'];
+    //Lo agrego en la tabla de relacion N N 
+            $this->db->query("INSERT INTO se_asigna (Id_Categoria, Id_NRemunerativo) 
+             VALUES ($Id_Categoria,$noRemun)");      
+
+    }
 
 
 }
