@@ -27,6 +27,9 @@ class Categorias extends Model{
     }
 
     public function EliminarCategoria($Id_Categoria){
+        
         $this->db->query("DELETE FROM categorias WHERE Id_Categoria = $Id_Categoria ");
+        
+
     }
 }

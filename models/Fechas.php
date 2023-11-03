@@ -27,7 +27,9 @@ class Fechas extends Model{
             $query = $this->db->query("SELECT Id_fecha
                                          FROM fechas F
                                         WHERE año =$anio and $mes =mes");
-            return $query;
+            $query = $this->db->fetch();
+            $id_fecha = $query['Id_fecha'];
+            return $id_fecha;
         }
 
     }

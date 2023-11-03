@@ -45,7 +45,7 @@ function mostrarOpciones(opcion) {
                 document.getElementById('select2').disabled = false;
             }
         }
-        
+
 function obtenerFecha() {
     // Obtener el valor de la fecha
     var fecha = document.getElementById("fechaInput").value;
@@ -130,6 +130,16 @@ function restarFechas() {
     prevScrollpos = currentScrollPos;
   };
 
-/* Para mostrar los comunicados  */
+/* Para confirmar operacion  */
+  function confirmarOperacion() {
+    var resultado = confirm("¿Estás seguro de que quieres realizar esta operación?");
+    if (resultado) {
+        // Aquí puedes hacer una redirección o enviar una petición al servidor con JavaScript o realizar cualquier otra acción deseada.
+        alert("La operación ha sido confirmada");
+        
+    } else {
+        alert("La operación ha sido cancelada");
+    }
+}
 
 

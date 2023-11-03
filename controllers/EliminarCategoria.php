@@ -4,6 +4,7 @@
 require '../fw/fw.php';
 require '../models/Sector.php';
 require '../models/Categorias.php';
+require '../models/No_Remunerativo.php';
 require '../views/EliminarCategoria.php';
 require '../views/ListaCategorias.php';
 
@@ -17,6 +18,9 @@ if(isset($_GET['categorias'])){
    
     $c->EliminarCategoria($_GET['categorias']);
    
+    $NR = new No_Remunerativo();
+    //Borro todos losNoRemunerativos que quedan sin categoria 
+    $NR->limpiarNoRemunerativos();
     //Si borro voy a lista de categorias a comprobar 
     header("Location: Lista-Categorias");
 }else{

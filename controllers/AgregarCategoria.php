@@ -24,7 +24,6 @@ if(isset($_GET['descripcion'],$_GET['fallo'] ,$_GET['sector'],$_GET['anio'],$_GE
         $mes =$_GET['mes'];
         //esta funcion devuelve el id que encuentre o crea una fecha y devuelve el nuevo id
         $fechaN = $f->agregarFecha($año,$mes);
-        
         $categ= $c->buscarIdCategoria($_GET['descripcion'] ,$_GET['sector']);
         
         $sb= new Sueldo_Basico();

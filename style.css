@@ -1,27 +1,27 @@
   /* Estilos para el logotipo */
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
-  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-  outline: none !important;
-  background-repeat: no-repeat;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+      -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+      outline: none !important;
+      background-repeat: no-repeat;
+    }
 
-a:hover {
-    text-decoration: none;
-}
+    a:hover {
+        text-decoration: none;
+    }
 
-strong {
-    font-weight: 900;
-}
+    strong {
+        font-weight: 900;
+    }
 
 /*Menu */
     #menu{
@@ -52,87 +52,95 @@ strong {
   li a:hover {
     background-color: #555;
     color: white;
-}
+    }
 
 
 
 /* inicio sesion*/
 
   
-a:first-letter{
-        text-transform: uppercase;
-}
+    a:first-letter{
+            text-transform: uppercase;
+    }
 
-#admin{
+    #admin{
 
-     background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  width: 100px;
-    border-radius: 12px; /* Radio del borde */
-     position: fixed; /* Posición fija */
-    bottom: 45px; /* Distancia desde abajo */
-    right: -90px; /* Distancia desde la derecha */
-    z-index: 1; /* Índice Z para controlar el apilamiento */
-}
+         background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 100px;
+        border-radius: 12px; /* Radio del borde */
+         position: fixed; /* Posición fija */
+        bottom: 45px; /* Distancia desde abajo */
+        right: -90px; /* Distancia desde la derecha */
+        z-index: 1; /* Índice Z para controlar el apilamiento */
+    }
 
 
-#admin:hover {
-    background-color: #45a049; /* Cambio de color de fondo en el hover */
-    width: 200px;
-    right:20px;
-}
+    #admin:hover {
+        background-color: #45a049; /* Cambio de color de fondo en el hover */
+        width: 200px;
+        right:20px;
+    }
 
-#iniciar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+    #iniciar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-.login-container {
-    width: 300px;
-    padding: 40px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+    .login-container {
+        width: 300px;
+        padding: 40px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-button:hover {
-    background: #45a049;
-}
+    button:hover {
+        background: #45a049;
+    }
+/*Comunicados */
+
+    #comunicados-list li.Bingo:hover{
+        background-color: #C03F31;
+    }
+    #comunicados-list li.Loteria:hover{
+        background-color: #377c3e;
+    }
 
 /* NAV */ 
   
@@ -169,227 +177,227 @@ button:hover {
 /*Body*/
 
 
-body {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(96, 97, 99);
-    font-family: "MuseoSans", sans-serif;
-    font-weight: 300;
-}
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(96, 97, 99);
+        font-family: "MuseoSans", sans-serif;
+        font-weight: 300;
+    }
 
-div {
-    display: block;
-}
+    div {
+        display: block;
+    }
 
-div, input {
-    box-sizing: border-box;
-}
+    div, input {
+        box-sizing: border-box;
+    }
 
-h1 {
-  text-align: center;
-  color: 2e2d2d;
-  text-transform: uppercase;
-  font-size: 54px;
-  margin-bottom: 20px;
-  padding : none;
-}
+    h1 {
+      text-align: center;
+      color: 2e2d2d;
+      text-transform: uppercase;
+      font-size: 54px;
+      margin-bottom: 20px;
+      padding : none;
+    }
 
-label {
-  display:  inline-block;
-  margin-bottom: 10px;
-  cursor: pointer;
-  margin-right: 2px;
-  margin-left: 3px;
-  
-}
+    label {
+      display:  inline-block;
+      margin-bottom: 10px;
+      cursor: pointer;
+      margin-right: 2px;
+      margin-left: 3px;
+      
+    }
 
-input[type="text"],
-input[type="number"],
-select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    input[type="text"],
+    input[type="number"],
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-input[type="date"] {
-  /* Estilos personalizados aquí */
-  /* Ejemplo de estilos */
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 4px;
-  font-family: Arial, sans-serif;
-}
+    input[type="date"] {
+      /* Estilos personalizados aquí */
+      /* Ejemplo de estilos */
+      padding: 5px;
+      border: 1px solid gray;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+    }
 
-input[type="month"]{
-}
+    input[type="month"]{
+    }
 
-#ingreso{
-  display: none;
-}
-
-
-input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#formularioRecibo{
-  font-size: 120%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#infoRecibo{
-
-    font-size: 120%;
-    width: 100%;
-    font-family: sans-serif;
-}
-
-.infoStatic{
-    display:inline;
-    color: orange;
-}
-
-#recibo {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f8f5f5;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-#lista td{
-    text-align: center;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  display:table;
-  font-size:20px;
-}
-
-th{
-  font-size: 120%;
-  background-color: rgb(177, 211, 255);
-  text-align: center;
-}
-td{
-  text-align: right;
-}
-
-th, td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd; 
-  vertical-align: middle;
-}
-
-td.concepto{
-  text-align: left;
-  font-size: 110%;
-}
-
-#neto:hover{
-  color:#4caf50;
-  font-size: 110%;
-  font-weight: bolder;
-}
-
-.fondo-cuerpo {
-    background-color: #FFF;
-    margin: 0 auto;
-    max-width: 1260px;
-}
-
-#fechaIngreso {
-  /* Add your desired styles here */
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin: 10px;
-}
-
-section.cuerpo {
-    margin: 0 auto;
-    font-size: 20px;
-}
-
-section.cuerpo .cabecera .divisor {
-    margin-bottom: 12px;
-}
+    #ingreso{
+      display: none;
+    }
 
 
-section.cuerpo  .cabecera h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #c14032;
-    margin-bottom: 20px;
-}
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-section.cuerpo .cabecera {
-    background-color: #f3f2f4;
-    padding: 20px 30px;
-    margin-bottom: 10px;
-}
+    #formularioRecibo{
+      font-size: 120%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-#apartadoLegal{
-  color: #155724;
-  background-color: #d4edda;
-  border-color: 202922 ;
-  padding: 0.5rem;
-  margin: 1rem;
-  border: 2px solid ;
-  border-radius: 4px;
-}
+    #infoRecibo{
+
+        font-size: 120%;
+        width: 100%;
+        font-family: sans-serif;
+    }
+
+    .infoStatic{
+        display:inline;
+        color: orange;
+    }
+
+    #recibo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f8f5f5;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    #lista td{
+        text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      display:table;
+      font-size:20px;
+    }
+
+    th{
+      font-size: 120%;
+      background-color: rgb(177, 211, 255);
+      text-align: center;
+    }
+    td{
+      text-align: right;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd; 
+      vertical-align: middle;
+    }
+
+    td.concepto{
+      text-align: left;
+      font-size: 110%;
+    }
+
+    #neto:hover{
+      color:#4caf50;
+      font-size: 110%;
+      font-weight: bolder;
+    }
+
+    .fondo-cuerpo {
+        background-color: #FFF;
+        margin: 0 auto;
+        max-width: 1260px;
+    }
+
+    #fechaIngreso {
+      /* Add your desired styles here */
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    section.cuerpo {
+        margin: 0 auto;
+        font-size: 20px;
+    }
+
+    section.cuerpo .cabecera .divisor {
+        margin-bottom: 12px;
+    }
+
+
+    section.cuerpo  .cabecera h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #c14032;
+        margin-bottom: 20px;
+    }
+
+    section.cuerpo .cabecera {
+        background-color: #f3f2f4;
+        padding: 20px 30px;
+        margin-bottom: 10px;
+    }
+
+    #apartadoLegal{
+      color: #155724;
+      background-color: #d4edda;
+      border-color: 202922 ;
+      padding: 0.5rem;
+      margin: 1rem;
+      border: 2px solid ;
+      border-radius: 4px;
+    }
 
 /*Barra Admin*/
 
-#AdminBar{
-    width: 100%;
-    background-color: #377c3e;
-    color: white;
-    text-align: center;
-    font-size: 150%;
-    font-family: Garamond;
-    border-bottom: 6px solid rgb(255, 255, 255);
-}
+    #AdminBar{
+        width: 100%;
+        background-color: #377c3e;
+        color: white;
+        text-align: center;
+        font-size: 150%;
+        font-family: Garamond;
+        border-bottom: 6px solid rgb(255, 255, 255);
+    }
 
-#AdminBar a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 5px 20px;
-    text-decoration: none;
-  }
+    #AdminBar a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 5px 20px;
+        text-decoration: none;
+      }
 
-    
-#AdminBar a:hover {
-    background-color: #275c2d;
-    color: #fff;
-  }
+        
+    #AdminBar a:hover {
+        background-color: #275c2d;
+        color: #fff;
+      }
 
-  #delete{
-    background-color: red;
-  }
+      #delete{
+        background-color: red;
+      }
 
-  #delete:hover{
-    background-color: #7d1801;
-    color: #fff;
-  }
+      #delete:hover{
+        background-color: #7d1801;
+        color: #fff;
+      }
 
 /*header de la pagina inicial ALEARA*/
 

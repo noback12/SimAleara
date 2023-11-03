@@ -58,7 +58,7 @@
                 <ul id="comunicados-list">
                 <?php foreach($this->comunicados as $c){ ?>
                     <!-- Supongamos que tienes una lista de comunicados con títulos y rutas de PDF -->
-                    <li data-pdf=<?= $c['Direccion'] ?>>  <?= $c['Titulo_Comunicado'] ?></li>
+                    <li data-pdf=comunicados/<?= $c['Direccion'] ?> class=<?= $c['Nombre_Sector'] ?>>  <?= $c['Titulo_Comunicado'] ?></li>
                 
                 <?php } ?>
                 </ul>

@@ -41,5 +41,10 @@ class No_Remunerativo extends Model{
 
     }
 
+    //Borro todos los No remunerativos que quedaron Sin relacion
+    public function limpiarNoRemunerativos(){
+    $this->db->query("DELETE FROM no_remunerativo
+    WHERE Id_NRemunerativo NOT IN (SELECT Id_NRemunerativo FROM se_asigna); ");
 
+    }
 }
