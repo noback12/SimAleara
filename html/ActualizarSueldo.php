@@ -58,7 +58,6 @@
                 </div>
                 <br>
                 
-
                 <label>Fecha de comienzo:</label> 
                     <label for="anio">Año:</label>
                     <?php  $anioActual = date('Y'); ?>
@@ -118,19 +117,11 @@
                         <option value="11">NOVIEMBRE</option>
                         <option value="12">DICIEMBRE</option>
                     </select><br><br>
-
-
-
-              
                 <br><br>
-
                 <label for="monto">Ingrese el monto:  $</label>
                 <input type="number" id="monto" name="monto"  min="0" placeholder="150000" required><br><br>
 
-               
                 <input type="submit" value="Actualizar">
-
-
             </form>
 
 

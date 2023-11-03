@@ -26,7 +26,7 @@
             <div id="menu">
                     <ul>
                     <li><a href="FormularioRecibo">Simular Recibo</a></li>
-                    <li><a href="Historico">Historico(falta)</a></li>
+                    <li><a href="Historico">Historico</a></li>
                     <li><a href="Lista-Comunicados">ListaComunicados</a></li>
                     <li><a href="Manual de usuario">Manual De Usuario(falta)</a></li>
                     </ul>

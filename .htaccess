@@ -12,5 +12,6 @@ RewriteRule ^AgregarComunicado$ controllers/AgregarComunicado.php [NC,L]
 RewriteRule ^EliminarComunicado$ controllers/EliminarComunicado.php [NC,L]
 RewriteRule ^ActualizarSueldo$ controllers/ActualizarSueldo.php [NC,L]
 RewriteRule ^BorrarNoRemunerativos$ controllers/EliminarNoRemunerativos.php [NC,L]
-
+RewriteRule ^Historico$ controllers/Historico.php [NC,L]
+RewriteRule ^VerHistorico$ controllers/VerHistorico.php [NC,L]
 

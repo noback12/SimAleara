@@ -99,7 +99,7 @@
       <input type='hidden' value='0' name='mutual'>
       <input type="checkbox" id="mutual" name="mutual" value="1"><label for="mutual">Mutual</label><br>
       <label for="ajustes">Ajustes:</label>
-      <input type="number" id="ajustes" name="ajustes"><br><br>
+      <input type="number" id="ajustes" name="ajustes" value=0 required><br><br>
         <input type="submit" value="Simular">
     </form>
     <div id="apartadoLegal">

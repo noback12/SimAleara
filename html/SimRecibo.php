@@ -148,7 +148,7 @@
                             ?>     
 
                         <?php // Ajustes que ingresa el trabajador manualmente en caso de que quiera calcular alguna particularidad de su recibo 
-                      if($_GET["ajustes"] != 0 ){
+                      if(isset($_GET["ajustes"])  ){
                                          echo '
                                         <td class="concepto">Ajustes del trabajador</td>
                                         <td> ingreso manual </td>

@@ -34,4 +34,15 @@ class Categorias extends Model{
     public function EliminarCategoria($Id_Categoria){ 
         $this->db->query("DELETE FROM categorias WHERE Id_Categoria = $Id_Categoria ");
     }
+
+    public function verHistorico($id_categoria){
+        $this->db->query("SELECT * FROM categorias c  
+                            INNER JOIN sueldo_basico AS SB on C.Id_Categoria = SB.Id_Categoria
+                            INNER JOIN fechas AS F on F.Id_Fecha = SB.Id_fecha
+                            INNER JOIN sector s ON c.id_sector = s.Id_sector
+                            WHERE  C.Id_categoria =$id_categoria ORDER BY f.año ASC, f.mes ASC
+                            ");
+        return $this->db->fetchAll();
+
+    }
 }

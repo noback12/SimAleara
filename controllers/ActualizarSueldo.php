@@ -81,6 +81,7 @@ if(isset($_GET['sector'],$_GET['anio'] , $_GET['mes'],$_GET['aniof'],$_GET['mesf
     //Vista AgregarCategoria 
     $v = new ActualizarSueldo();
     $v->sector = $sectores;
+    header("Location: Historico");
 }else{
     $sectores = $s->getTodos();
     //Vista AgregarCategoria 
