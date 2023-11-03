@@ -10,6 +10,11 @@ class Categorias extends Model{
         return $this->db->fetchAll();
     }
 
+    public function getTodasSector($idSector){
+        $this->db->query("SELECT * FROM categorias c  INNER JOIN sector s ON c.id_sector = s.Id_sector WHERE s.id_sector = $idSector");
+        return $this->db->fetchAll();
+    }
+
     public function agregarCategoria($descripcion,$fallo,$id_sector){
         $this->db->query("INSERT INTO categorias (descripcion, fallo, id_sector) 
         VALUES ('$descripcion', '$fallo', '$id_sector')");
@@ -26,10 +31,7 @@ class Categorias extends Model{
         }   
     }
 
-    public function EliminarCategoria($Id_Categoria){
-        
+    public function EliminarCategoria($Id_Categoria){ 
         $this->db->query("DELETE FROM categorias WHERE Id_Categoria = $Id_Categoria ");
-        
-
     }
 }

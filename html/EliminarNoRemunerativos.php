@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
  	<link rel="stylesheet" href="style.css"> 		
-	<title>Eliminar Comunicado</title>
+	<title>Eliminar No Remunerativo</title>
     <script  src="SimAleara.js" ></script> 
 </head>
 <body>
@@ -17,18 +17,19 @@
         <section class="cuerpo">
             <div class="cabecera">
                 <div class="divisor">   </div>
-                <h1>Eliminar Comunicado</h1>
+                <h1>Eliminar No Remunerativo</h1>
             </div>
             
             <form action="" method="get">
-                <label> Seleccione Comunicado a Borrar</label> <select name="comunicado" id="comunicado"> 
+                <label> Seleccione no Remunerativo  a Borrar</label> <select name="NoRemunerativo" id="NoRemunerativo"> 
+                    
                         <?php
-                        foreach($this->Comunicados as $c){?>
-                        <option value="<?= $c['Id_Comunicado'] ?>">  <?= $c['Titulo_Comunicado'] ?> - <?= $c['Nombre_Sector']?> - <?= $c['mes']?>/<?= $c['año']  ?></option> 
+                        foreach($this->NoRemunerativo as $nr){?>
+                        <option value="<?= $nr['Id_NRemunerativo'] ?>">  <?= $nr['mes']?>/<?= $nr['año'] ?> -  <?= $nr['Nombre'] ?> - $<?= $nr['monto']?> -  <?= $nr['descripcion'] ?> </option> 
                                 <?php } ?>
                     </select><br>
                 
-                <br><br><input id="delete" type="submit" value="Eliminar Comunicado">
+                <br><br><input id="delete" type="submit" value="Eliminar No Remunerativo">
             </form>
 
 

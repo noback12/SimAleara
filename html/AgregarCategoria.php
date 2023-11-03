@@ -34,11 +34,17 @@
                 
                 <label>Fecha de comienzo:</label> 
                 <label for="anio">Año:</label>
+                <?php  $anioActual = date('Y'); ?>
+
                 <select id="anio" name="anio" required>
-                    <?php for($i=2025 ; $i >=2020 ; $i--) { ?>
-                    <option value="<?=$i?>"><?=$i?></option> 
-                    <?php } ?>
-                </select>
+                    <?php 
+                for ($i = $anioActual + 5; $i >= 2020; $i--) {
+                    if ($i == $anioActual) {
+                        echo '<option value="' . $i . '" selected>' . $i . '</option>';
+                    } else {
+                        echo '<option value="' . $i . '">' . $i . '</option>';
+                    }
+                } ?></select>
                 &nbsp&nbsp&nbsp&nbsp
                 <label for="mes">Mes:</label>
                 <select id="mes" name="mes" required>

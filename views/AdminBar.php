@@ -4,7 +4,7 @@
   <a href="Lista-Categorias">Lista Categorias</a>
   <a href="AgregarCategoria">Agregar Categoria</a>
   <a href="EliminarCategoria">Eliminar Categoria</a>
-  <a href="">Actualizar Sueldo</a>
+  <a href="ActualizarSueldo">Actualizar Sueldo</a>
   <a href="AgregarComunicado">Agregar Comunicado</a>
   <a href="EliminarComunicado">Eliminar un comunicado</a>
 

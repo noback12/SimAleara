@@ -95,9 +95,9 @@
         <input type="number" id="alimentacion" name="alimentacion" min="0" max="31" value="21">
       </div>
       <input type='hidden' value='0' name='presentismo'>
-      <label><input type="checkbox" id="presentismo" value="1" name ="presentismo" checked>  Ad. Presentismo</label>
+      <label for="presentismo"><input type="checkbox" id="presentismo" value="1" name ="presentismo" checked>  Ad. Presentismo</label>
       <input type='hidden' value='0' name='mutual'>
-      <input type="checkbox" id="mutual" name="mutual" value="1"><label>Mutual</label><br>
+      <input type="checkbox" id="mutual" name="mutual" value="1"><label for="mutual">Mutual</label><br>
       <label for="ajustes">Ajustes:</label>
       <input type="number" id="ajustes" name="ajustes"><br><br>
         <input type="submit" value="Simular">

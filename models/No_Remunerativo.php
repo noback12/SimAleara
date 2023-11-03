@@ -7,7 +7,11 @@ class No_Remunerativo extends Model{
 
     //FALTAN LAS VALIDACIONES 
     public function getTodos(){
-        $this->db->query("SELECT * FROM No_Remunerativo");
+        $this->db->query("SELECT * FROM no_remunerativo nr
+                            INNER JOIN fechas f ON nr.Id_Fecha = f.Id_Fecha
+                            INNER JOIN se_asigna AS Asigna on Asigna.Id_NRemunerativo = NR.Id_NRemunerativo
+                            INNER JOIN categorias AS C on C.Id_categoria = Asigna.Id_categoria ORDER BY f.año DESC, f.mes DESC
+                            " );
         return $this->db->fetchAll();
     }
 //Lista de conceptos en un sector en particular
@@ -28,16 +32,17 @@ class No_Remunerativo extends Model{
         //Inserto en la tabla No remunerativa
         $this->db->query("INSERT INTO no_remunerativo (Nombre, monto, Id_Fecha) 
         VALUES ('$nombre', $montoNR, '$Id_fecha')");
-    //Busco lo que inserte 
+         //Busco lo que inserte 
        $query = $this->db->query("SELECT Id_NRemunerativo
                                          FROM no_remunerativo NR
-                                        WHERE Id_Fecha ='$Id_fecha' AND $montoNR =monto AND '$nombre' = Nombre ");
+                                        WHERE Id_Fecha ='$Id_fecha' AND $montoNR =monto AND '$nombre' = Nombre 
+                                        ORDER BY Id_NRemunerativo DESC LIMIT 1");
         $query = $this->db->fetch();
-    var_dump($query);
-    $noRemun= $query['Id_NRemunerativo'];
-    //Lo agrego en la tabla de relacion N N 
+         $noRemun= $query['Id_NRemunerativo'];
+            //Lo agrego en la tabla de relacion N N 
             $this->db->query("INSERT INTO se_asigna (Id_Categoria, Id_NRemunerativo) 
-             VALUES ($Id_Categoria,$noRemun)");      
+             VALUES ($Id_Categoria,$noRemun)");
+            
 
     }
 
@@ -47,4 +52,12 @@ class No_Remunerativo extends Model{
     WHERE Id_NRemunerativo NOT IN (SELECT Id_NRemunerativo FROM se_asigna); ");
 
     }
+
+    public function EliminarNoRemunerativo($id_NoRem){
+        $this->db->query("DELETE FROM no_remunerativo 
+        WHERE Id_NRemunerativo = $id_NoRem");
+    }
+
+    
+
 }

@@ -56,7 +56,13 @@
                         <td class="concepto"><?= $con['Nombre_Concepto'] ?>  </td>
                         <td><?= $con['cmonto'] ?>%</td>
                         <?php if($con['Nombre_Concepto']!="Antiguedad"){
-                            $resultadoCalculado = $this->sector[0]["Sueldo_basico"] * $con['cmonto']/100;}
+                            $resultadoCalculado = $this->sector[0]["Sueldo_basico"] * $con['cmonto']/100;
+                            
+                            if($con['Nombre_Concepto']=="Horas Extra 50%"){
+                                $resultadoCalculado = $resultadoCalculado * $_GET['horas50'];
+                            }elseif($con['Nombre_Concepto']=="Horas Extra 100%"){
+                                $resultadoCalculado = $resultadoCalculado * $_GET['horas100'];}}
+                            
                             else{
                                 //Para que multiplique por los años de antiguedad
                                 $resultadoCalculado = $this->sector[0]["Sueldo_basico"] * $con['cmonto']/100 * $antiguedad;
@@ -66,7 +72,7 @@
                             ?>
                             <?php echo number_format($resultadoCalculado, 2);
                                 //Los descuentos se hacen en base a los remunerativos 
-                                $Descuentos = $Descuentos + $resultadoCalculado ?></td>
+                                ?></td>
                         <td></td>
                         <td></td>
                     </tr> <?php } ?>
@@ -100,10 +106,9 @@
                      </tr>';
                         //Los descuentos se hacen en base a los remunerativos 
                         $remunerativo = $remunerativo + $resultadoCalculado;
-                        $Descuentos = $Descuentos + $resultadoCalculado ;
+                        
                      } ?>
-                     
-                     
+
                       <?php // SI pierden el presentismo 
                       if($_GET["presentismo"] == "0"){
                                 foreach ($this->Conceptos as $con ) { 
@@ -142,6 +147,20 @@
                                 }
                             ?>     
 
+                        <?php // Ajustes que ingresa el trabajador manualmente en caso de que quiera calcular alguna particularidad de su recibo 
+                      if($_GET["ajustes"] != 0 ){
+                                         echo '
+                                        <td class="concepto">Ajustes del trabajador</td>
+                                        <td> ingreso manual </td>
+                                        <td>'.number_format($_GET["ajustes"]) .'</td>
+                                        <td></td>
+                                        <td></td>
+                                         <tr>';
+                                        }
+                                        $remunerativo = $remunerativo + $_GET["ajustes"];
+                                
+                            ?>   
+
                     <!--los conceptos NO remunerativos -->
                     <?php foreach ($this->No_Remunerativo as $NRem ) { 
                         $resultadoCalculado = $NRem['monto'];
@@ -163,6 +182,7 @@
                     </tr>
                     <?php $NoRemunerativo += $resultadoCalculado;
                  } ?>
+
                     <!--los Aportes  -->
                     <?php foreach ($this->Conceptos as $con ) { 
                         if( $con['cmonto']<0){
