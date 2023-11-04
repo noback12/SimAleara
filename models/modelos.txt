@@ -1,3 +1,0 @@
-para cada tabla hago un modelo
-
-FALTAN LAS VALIDACIONES DE TODAS

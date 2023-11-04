@@ -9,7 +9,7 @@ class Comunicados extends Model{
         $this->db->query("SELECT * FROM comunicados c 
                             INNER JOIN sector S on c.Id_Sector = S.Id_Sector
                             INNER JOIN fechas f ON c.Id_Fecha = f.Id_Fecha
-                            ORDER BY c.Id_Fecha DESC");
+                            ORDER BY c.Id_Fecha ASC");
         return $this->db->fetchAll();
     }
 

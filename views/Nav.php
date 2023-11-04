@@ -4,5 +4,5 @@
   <a href="FormularioRecibo">Simular Recibo</a>
   <a href="Lista-Comunicados">Comunicados</a>
   <a href="Historico">Historico</a>
-  <a href="">Manual</a>
+  <a href="ManualDeUsuario">Manual</a>
 </nav>

@@ -10,14 +10,20 @@ require '../views/EliminarNoRemunerativos.php';
 $nr = new No_Remunerativo();
 $todosNR = $nr->getTodos();
 
-if(isset($_GET['NoRemunerativo'])){
-   //Elimino el No remunerativo 
-   $nr->EliminarNoRemunerativo($_GET['NoRemunerativo']);
-   $nr->limpiarNoRemunerativos();
-    //Voy a la lista de comunicados
-    header("Location: BorrarNoRemunerativos");
-}else{
-    $v = new EliminarNoRemunerativos();
-    $v->NoRemunerativo = $todosNR;
-$v->render();
+session_start();
+//Si inicie sesion acceso
+    if (isset($_SESSION['logueado'])) {
+    if(isset($_GET['NoRemunerativo'])){
+    //Elimino el No remunerativo 
+    $nr->EliminarNoRemunerativo($_GET['NoRemunerativo']);
+    $nr->limpiarNoRemunerativos();
+        //Voy a la lista de comunicados
+        header("Location: BorrarNoRemunerativos");
+    }else{
+        $v = new EliminarNoRemunerativos();
+        $v->NoRemunerativo = $todosNR;
+    $v->render();
+    }
 }
+else {//Sino envio al formulario de inicio de sesion 
+header("Location: InicioSesion");}

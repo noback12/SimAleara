@@ -14,4 +14,7 @@ RewriteRule ^ActualizarSueldo$ controllers/ActualizarSueldo.php [NC,L]
 RewriteRule ^BorrarNoRemunerativos$ controllers/EliminarNoRemunerativos.php [NC,L]
 RewriteRule ^Historico$ controllers/Historico.php [NC,L]
 RewriteRule ^VerHistorico$ controllers/VerHistorico.php [NC,L]
-
+RewriteRule ^ManualDeUsuario$ controllers/ManualDeUsuario.php [NC,L]
+RewriteRule ^MenuAdministrador$ controllers/MenuAdministrador.php [NC,L]
+RewriteRule ^Administrador$ controllers/MenuAdministrador.php [NC,L]
+RewriteRule ^logout$ controllers/logout.php [NC,L]

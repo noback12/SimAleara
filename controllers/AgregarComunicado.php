@@ -10,25 +10,32 @@ require '../views/AgregarComunicado.php';
 
 $c = new Comunicados();
 $s = new Sector();
+session_start();
+//Si inicie sesion acceso
+if (isset($_SESSION['logueado'])) {
 
-if(isset($_GET['titulo'],$_GET['fileName'] , $_GET['sector'],$_GET['anio'],$_GET['mes'])){
+    if(isset($_GET['titulo'],$_GET['fileName'] , $_GET['sector'],$_GET['anio'],$_GET['mes'])){
+        
+        //Busco o agrego la fecha
+        $f = new Fechas();
+        $año =$_GET['anio'];
+        $mes =$_GET['mes'];
+        $fechaC = $f->agregarFecha($año,$mes);
+        var_dump($fechaC);
+        //Agrego el comunicado
+        $c->agregarComunicado( $_GET['titulo'] ,$_GET['fileName'] , $_GET['sector'],$fechaC );
+
     
-    //Busco o agrego la fecha
-    $f = new Fechas();
-    $año =$_GET['anio'];
-    $mes =$_GET['mes'];
-    $fechaC = $f->agregarFecha($año,$mes);
-    var_dump($fechaC);
-    //Agrego el comunicado
-    $c->agregarComunicado( $_GET['titulo'] ,$_GET['fileName'] , $_GET['sector'],$fechaC );
+        //Si cree voy a lista de categorias a ver que se agrego 
+        header("Location: Lista-Comunicados");
+    }else{
+        $sectores = $s->getSector();
+        //Vista AgregarCategoria 
+        $v = new AgregarComunicado();
+        $v->sector = $sectores;
+    }
+    $v->render();
 
-   
-    //Si cree voy a lista de categorias a ver que se agrego 
-    header("Location: Lista-Comunicados");
-}else{
-    $sectores = $s->getSector();
-    //Vista AgregarCategoria 
-    $v = new AgregarComunicado();
-    $v->sector = $sectores;
 }
-$v->render();
+else {//Sino envio al formulario de inicio de sesion 
+header("Location: InicioSesion");}

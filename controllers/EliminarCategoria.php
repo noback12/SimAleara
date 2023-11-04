@@ -13,18 +13,24 @@ require '../views/ListaCategorias.php';
 $s = new sector();
 $c = new Categorias();
 $todos = $s->getTodos();
-
-if(isset($_GET['categorias'])){
-   
-    $c->EliminarCategoria($_GET['categorias']);
-   
-    $NR = new No_Remunerativo();
-    //Borro todos losNoRemunerativos que quedan sin categoria 
-    $NR->limpiarNoRemunerativos();
-    //Si borro voy a lista de categorias a comprobar 
-    header("Location: Lista-Categorias");
-}else{
-    $v = new EliminarCategoria();
-    $v->sector = $todos;
-$v->render();
+session_start();
+//Si inicie sesion acceso
+if (isset($_SESSION['logueado'])) {
+    if(isset($_GET['categorias'])){
+    
+        $c->EliminarCategoria($_GET['categorias']);
+    
+        $NR = new No_Remunerativo();
+        //Borro todos losNoRemunerativos que quedan sin categoria 
+        $NR->limpiarNoRemunerativos();
+        //Si borro voy a lista de categorias a comprobar 
+        header("Location: Lista-Categorias");
+    }else{
+        $v = new EliminarCategoria();
+        $v->sector = $todos;
+    $v->render();
+    }
 }
+else {//Sino envio al formulario de inicio de sesion 
+header("Location: InicioSesion");}
+?>

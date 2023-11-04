@@ -11,8 +11,6 @@
 <body>
     <!--incluyo el header oficial-->
     <?php include '../views/HeaderAleara.php'; ?>
-    <!--distintivo de usuario adminstrador-->
-    <?php include '../views/AdminBar.php'; ?>
 
     <main class="fondo-cuerpo">
         <section class="cuerpo">

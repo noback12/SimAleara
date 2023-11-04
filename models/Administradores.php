@@ -5,11 +5,13 @@
 
 class Administradores extends Model{
  
+    public function Inicio($usuario, $passwd){
 
-    //FALTAN VALIDACIONES 
-    public function getTodos(){
-        $this->db->query("SELECT * FROM administradores A ");
-        return $this->db->fetchAll();
-    }
+		$this->db->query("SELECT *
+										FROM administradores
+										WHERE usuario='$usuario' and contraseña='$passwd'
+										LIMIT 1");
+		return $this->db->fetchAll();
+	}
 
 }

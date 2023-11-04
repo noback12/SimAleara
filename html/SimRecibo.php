@@ -149,16 +149,17 @@
 
                         <?php // Ajustes que ingresa el trabajador manualmente en caso de que quiera calcular alguna particularidad de su recibo 
                       if(isset($_GET["ajustes"])  ){
-                                         echo '
-                                        <td class="concepto">Ajustes del trabajador</td>
-                                        <td> ingreso manual </td>
-                                        <td>'.number_format($_GET["ajustes"]) .'</td>
-                                        <td></td>
-                                        <td></td>
-                                         <tr>';
-                                        }
-                                        $remunerativo = $remunerativo + $_GET["ajustes"];
-                                
+                        if($_GET["ajustes"]!=0){
+                                echo '
+                            <td class="concepto">Ajustes del trabajador</td>
+                            <td> ingreso manual </td>
+                            <td>'.number_format($_GET["ajustes"]) .'</td>
+                            <td></td>
+                            <td></td>
+                                <tr>';
+                            }
+                            $remunerativo = $remunerativo + $_GET["ajustes"];
+                        }       
                             ?>   
 
                     <!--los conceptos NO remunerativos -->

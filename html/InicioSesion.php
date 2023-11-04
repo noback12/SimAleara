@@ -10,10 +10,7 @@
 <body>
     <!--incluyo el header oficial-->
     <?php include '../views/HeaderAleara.php'; ?>
-    <!--distintivo de usuario adminstrador-->
-    <?php include '../views/AdminBar.php'; ?>
-
-
+    
     <main class="fondo-cuerpo">
         <section class="cuerpo">
             <div class="cabecera">
@@ -26,8 +23,8 @@
             <div class="login-container">
             <h2>Bienvenido/a</h2>
         <form>
-            <input type="text" placeholder="Nombre de usuario" required>
-            <input type="password" placeholder="Contraseña" required>
+            <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+            <input type="password" placeholder="Contraseña" name="password" required>
             <button type="submit">Iniciar Sesión</button>
         </form>
             </div>

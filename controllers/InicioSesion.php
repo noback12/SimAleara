@@ -4,13 +4,32 @@
 require '../fw/fw.php';
 require '../models/Administradores.php';
 require '../views/InicioSesion.php';
+require '../views/MenuAdministrador.php';
 
-$a = new Administradores();
-$todos = $a->getTodos();
 
-//var_dump($todos);
+$adm = new Administradores();
 
-//Vista InicioSesion 
-$v = new InicioSesion();
-$v->Administradores = $todos;
-$v->render();
+if(isset($_GET["usuario"])){
+	//validaciones	
+	$usuario = $_GET["usuario"];
+	$passwd = sha1($_GET["password"]);
+	$administrador = $adm->Inicio($usuario, $passwd);
+
+    if(!empty($administrador) ){
+		session_start();
+		$_SESSION['logueado'] = true;
+		$_SESSION['usuario'] = $usuario ;
+		$_SESSION['empleado'] = true;
+		header("Location: Administrador");
+        $vAdmin = new MenuAdministrador();
+		$vAdmin->administrador = $administrador;
+	}else{
+		echo "<script>alert('Usuario o contraseña incorrecto')</script>";
+		$vAdmin = new InicioSesion();
+	}   
+}
+else{
+	$vAdmin = new InicioSesion();
+}
+$vAdmin->render();
+?>
