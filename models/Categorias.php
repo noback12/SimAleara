@@ -11,6 +11,19 @@ class Categorias extends Model{
     }
 
     public function getTodasSector($idSector){
+        //si no existe
+		if(!ctype_digit($idSector)) throw new ValidacionException("Error idSector 1") ;
+        //si es menor a uno
+		if($idSector < 1) throw new ValidacionException("El id es menor a 1");
+
+        //se obtienen mas de 1 resultado  ($pId echo ? )
+		$this->db->query("SELECT * FROM categorias
+        WHERE id_sector = $idSecotr ");
+
+        if($this->db->numRows() !=1) throw new ValidacionException("No existe el sector");
+
+        ////////////////////////////////////////////////////////////////////////////////////
+
         $this->db->query("SELECT * FROM categorias c  INNER JOIN sector s ON c.id_sector = s.Id_sector WHERE s.id_sector = $idSector");
         return $this->db->fetchAll();
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2023 a las 12:14:58
+-- Tiempo de generación: 04-11-2023 a las 10:48:38
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -30,15 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `administradores` (
   `id_admin` int(11) NOT NULL,
   `usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(64) COLLATE utf8_spanish_ci NOT NULL
+  `contraseña` varchar(64) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `administradores`
 --
 
-INSERT INTO `administradores` (`id_admin`, `usuario`, `password`) VALUES
-(1, 'martin', 'hash');
+INSERT INTO `administradores` (`id_admin`, `usuario`, `contraseña`) VALUES
+(1, 'martin', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(2, 'maxi', 'b9e96da8ff663427a473c4897b4999ba3b79b622'),
+(3, 'aleara', 'e9de5affb0b36b3e47bf27a0372d17e588649217');
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,10 @@ CREATE TABLE `comunicados` (
 INSERT INTO `comunicados` (`Id_Comunicado`, `Titulo_Comunicado`, `Direccion`, `Id_Sector`, `Id_Fecha`) VALUES
 (2, 'Participacion en Ganancias', 'ParticipacionGanancias.pdf', 2, 1),
 (33, 'Primer tratativa paritarias 2023', 'comunicado_29-03[1].pdf', 2, 9),
-(34, 'Resolucion Homolgacion', 'ResolucionHomologacion.pdf', 1, 21);
+(34, 'Resolucion Homolgacion', 'ResolucionHomologacion.pdf', 1, 21),
+(35, 'Circular', 'circular0818.pdf', 1, 31),
+(36, 'Reglamento De Permisionarios', 'ReglamentodePermisionarios201810.pdf', 1, 31),
+(37, 'Tope Indeminzadorio', 'cct-627-2011-aleara-caoln-tope-indemnizatorio.pdf', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -185,7 +190,8 @@ INSERT INTO `fechas` (`Id_Fecha`, `mes`, `año`) VALUES
 (27, 1, 2021),
 (28, 11, 2023),
 (29, 12, 2023),
-(30, 10, 2023);
+(30, 10, 2023),
+(31, 10, 2020);
 
 -- --------------------------------------------------------
 
@@ -806,7 +812,7 @@ INSERT INTO `sueldo_basico` (`Id_Sueldo`, `Sueldo_Basico`, `Id_Categoria`, `Id_f
 (2, 310000.77, 1, 2),
 (3, 315000.07, 1, 3),
 (4, 103345.9, 9, 4),
-(5, 150000, 26, 4),
+(5, 100000, 26, 4),
 (33, 150000, 1, 4),
 (34, 150000, 1, 22),
 (35, 150000, 1, 9),
@@ -817,14 +823,18 @@ INSERT INTO `sueldo_basico` (`Id_Sueldo`, `Sueldo_Basico`, `Id_Categoria`, `Id_f
 (40, 100, 2, 4),
 (41, 150, 2, 22),
 (42, 300, 2, 9),
-(43, 200000, 26, 22),
-(44, 200000, 26, 9),
+(43, 100000, 26, 22),
+(44, 100000, 26, 9),
 (45, 300000, 26, 23),
 (46, 300000, 26, 24),
 (47, 300000, 26, 25),
 (48, 300000, 26, 1),
 (49, 320000, 1, 28),
-(50, 320000, 1, 29);
+(50, 320000, 1, 29),
+(51, 350000, 26, 2),
+(52, 400000, 26, 3),
+(53, 400000, 26, 30),
+(54, 400000, 26, 28);
 
 --
 -- Índices para tablas volcadas
@@ -906,7 +916,7 @@ ALTER TABLE `sueldo_basico`
 -- AUTO_INCREMENT de la tabla `administradores`
 --
 ALTER TABLE `administradores`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -918,7 +928,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `comunicados`
 --
 ALTER TABLE `comunicados`
-  MODIFY `Id_Comunicado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `Id_Comunicado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `conceptos`
@@ -930,7 +940,7 @@ ALTER TABLE `conceptos`
 -- AUTO_INCREMENT de la tabla `fechas`
 --
 ALTER TABLE `fechas`
-  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id_Fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `no_remunerativo`
@@ -948,7 +958,7 @@ ALTER TABLE `sector`
 -- AUTO_INCREMENT de la tabla `sueldo_basico`
 --
 ALTER TABLE `sueldo_basico`
-  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `Id_Sueldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- Restricciones para tablas volcadas

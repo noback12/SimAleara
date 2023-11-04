@@ -6,7 +6,6 @@
 class Administradores extends Model{
  
     public function Inicio($usuario, $passwd){
-
 		$this->db->query("SELECT *
 										FROM administradores
 										WHERE usuario='$usuario' and contraseña='$passwd'
