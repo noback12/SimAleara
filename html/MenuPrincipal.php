@@ -1,11 +1,10 @@
-<!-- html/ListaCategorias.php --> 
+<!-- html/Inicio.php --> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
  	<link rel="stylesheet" href="style.css"> 		
 	<title>SimAleara Menu Principal</title>
-
 </head>
 <body>
     <!--incluyo el header oficial-->
@@ -24,7 +23,7 @@
                     <li><a href="Manualdeusuario">Manual De Usuario</a></li>
                     </ul>
             </div>       
-        <a href="InicioSesion" id="admin">Administrador</a>';
+        <a href="InicioSesion" id="admin">Administrador</a>
         </section>
   </main>
 
