@@ -12,14 +12,13 @@
     <?php include '../views/HeaderAleara.php'; ?>
     
     <main class="fondo-cuerpo">
-        <section class="cuerpo">
+        <section class="cuerpo" id="ini" >
             <div class="cabecera">
                 <div class="divisor"> </div>
                 <h1>Inicio Sesion</h1>
             </div>
 
             <div id="iniciar">
-                
                 <div class="login-container">
                     <form><h2>Bienvenido/a</h2>
                         <input type="text" placeholder="Nombre de usuario" id="usu" name="usuario" required>

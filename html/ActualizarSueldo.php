@@ -22,9 +22,13 @@
             
             <form action="" method="get">
                
-                        <br><label>Seleccionar en que sector trabaja:</label><br>
-                <input type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpcionesRedux('bingo')" required> Bingo
-                <input type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpcionesRedux('loteria')"> Lotería<br><br>
+            <label>Seleccionar en que sector trabaja:</label>&nbsp&nbsp&nbsp
+      <div class="radio">
+                <input class="radio__input" type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpcionesRedux('bingo')" required>
+                <label class="radio__label" for="bingo">Bingo</label>             
+                <input class="radio__input" type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpcionesRedux('loteria')"> 
+                <label class="radio__label" for="loteria">Loteria</label>
+            </div><br><br>
                 
                 <!-- Agrega todas las opciones correspondientes a la loteria -->
                     <div name="especificoLoteria" id="especificoLoteria" style="display:none;"> 

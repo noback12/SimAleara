@@ -20,20 +20,21 @@
             </div>
             
             <form action="" method="get" >
-        
-                
             
-            <br><label>Seleccionar en que sector trabaja:</label><br>
-                <input type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpcionesRedux('bingo')" required> Bingo
-                <input type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpcionesRedux('loteria')"> Lotería<br><br>
+                <br><label>Seleccionar en que sector trabaja:</label><br><br>
+                <div class="radio">
+                    <input class="radio__input" type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpcionesRedux('bingo')" required>
+                    <label class="radio__label" for="bingo">Bingo</label>             
+                    <input class="radio__input" type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpcionesRedux('loteria')"> 
+                    <label class="radio__label" for="loteria">Loteria</label>
+                </div>
+                <br><br>
                 
                 <!-- Agrega todas las opciones correspondientes a la loteria -->
-                    <div name="especificoLoteria" id="especificoLoteria" style="display:none;"> 
+                <div name="especificoLoteria" id="especificoLoteria" style="display:none;"> 
                     <label for="categoria">Categoria:</label>
                     <select name="select" id="select1"> 
-                        
                         <?php foreach($this->categorias as $c){ 
-                        
                         if ($c['Id_Sector'] === '1'){ ?>
                         <option value="<?= $c['Id_Categoria'] ?>">  <?= $c['descripcion'] ?>  </option>
                                 <?php } }?>
@@ -44,14 +45,13 @@
                 <div name="especificoBingo" id="especificoBingo" style="display:none;">
                     <label for="categoria">Categoria:</label>
                     <select name="select" id="select2" >
-                        
                         <?php foreach($this->categorias as $c){ 
                         if ($c['Id_Sector'] === '2'){ ?>
                         <option value="<?= $c['Id_Categoria'] ?>">  <?= $c['descripcion'] ?>  </option>
                                 <?php } }?>
                     </select><br>
                 </div>
-
+                            <br>
                 <input type="submit" value="Mostrar">
             </form>            
             <br>

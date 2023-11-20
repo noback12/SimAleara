@@ -24,6 +24,9 @@
     }
 
 /*Menu */
+
+
+
     #menu{
            display: flex;
     justify-content: center;
@@ -46,7 +49,7 @@
     text-align: center;
     padding: 20px 30px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 150%;
   }
 
   li a:hover {
@@ -54,31 +57,37 @@
     color: white;
     }
 
-
-
 /* inicio sesion*/
 
+    #ini {
+    /* Establece la imagen de fondo para el div */
+    background-image: url('img/Back/4.jpg'); /* Cambia 'ruta/de/la/imagen.jpg' por la ruta de tu imagen */
+    
+    /* Configuración del fondo */
+    background-size: cover; /* Cubre todo el fondo del div */
+    background-position: center; /* Centra la imagen en el fondo del div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita en el fondo del div */   
+    }
   
     a:first-letter{
             text-transform: uppercase;
     }
 
     #admin{
-
-         background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-      width: 100px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width: 100px;
         border-radius: 12px; /* Radio del borde */
-         position: fixed; /* Posición fija */
+        position: fixed; /* Posición fija */
         bottom: 45px; /* Distancia desde abajo */
         right: -90px; /* Distancia desde la derecha */
         z-index: 1; /* Índice Z para controlar el apilamiento */
@@ -91,12 +100,14 @@
         right:20px;
     }
 
-    #iniciar{
+     #iniciar{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
+        font-size: 150%;
+ 
     }
 
     .login-container {
@@ -106,10 +117,6 @@
         border: 1px solid #ddd;
         border-radius: 4px;
     }
-
-
-
-
 
     h2 {
         text-align: center;
@@ -147,6 +154,7 @@
     }
 
 /* NAV */ 
+
   
  nav {
     background-color:#373535;
@@ -167,6 +175,7 @@
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+     /* Agrega una transición de color suave */
   }
 
     nav a:hover {
@@ -206,14 +215,14 @@
       padding : none;
     }
 
-    label {
+    /*label {
       display:  inline-block;
       margin-bottom: 10px;
       cursor: pointer;
       margin-right: 2px;
       margin-left: 3px;
       
-    }
+    }*/
 
     input[type="text"],
     input[type="number"],
@@ -356,6 +365,7 @@
         background-color: #f3f2f4;
         padding: 20px 30px;
         margin-bottom: 10px;
+        border-radius: 5%;
     }
 
     #apartadoLegal{
@@ -504,7 +514,6 @@
     }
 
 /**/
-
     .fondo-header {
         background-color: rgb(192, 63, 49);
         width: 100%;
@@ -832,3 +841,49 @@
             padding: 0px;
         }
     }
+
+
+/* RADIOS */
+
+    .radio{
+
+        display:inline-flex;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .radio__input{
+        display: none;
+    }
+    .radio__label{
+   
+        padding: 8px;
+        font-size: 120%;
+        font-family: sans-serif;
+        color: #ffffff;
+        background: #009578;
+        cursor: pointer;
+        transition: background 0.1s;
+    }
+
+    .radio__label:not(:last-of-type){
+
+        border-right: 1px solid #006b56;
+
+    }
+
+    .radio__input:checked + .radio__label{
+
+        background: #01361c;
+    }
+/* warning */ 
+
+
+.warning2 {
+            background-color: #ffcccb; /* Color de fondo */
+            border: 1px solid #f00; /* Borde rojo */
+            color: #f00; /* Texto rojo */
+            padding: 10px; /* Espaciado interno */
+            margin-bottom: 15px; /* Margen inferior */
+        }

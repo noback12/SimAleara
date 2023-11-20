@@ -52,14 +52,19 @@
           </select>
         </div>
       <br>    
-      <br>    
+     
       <label for="feriados">Feriados:</label>
       <input type="number" id="feriados" name="feriados" min="0" max="31" value=0><br>
 
-      <br><label>Seleccionar en que sector trabaja:</label><br>
-      <input type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpciones('bingo')" required> Bingo
-      <input type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpciones('loteria')"> Lotería<br>
-      <br>
+      <br><label>Seleccionar en que sector trabaja:</label>&nbsp&nbsp&nbsp
+      <div class="radio">
+                <input class="radio__input" type="radio" id="bingo" name="sector" value="2" onclick="mostrarOpcionesRedux('bingo')" required>
+                <label class="radio__label" for="bingo">Bingo</label>             
+                <input class="radio__input" type="radio" id="loteria" name="sector" value="1" onclick="mostrarOpcionesRedux('loteria')"> 
+                <label class="radio__label" for="loteria">Loteria</label>
+            </div>
+
+      <br><br>
       <!-- Agrega todas las opciones correspondientes a la loteria -->
         <div name="especificoLoteria" id="especificoLoteria" style="display:none;"> 
         <label for="categoria">Categoria:</label>
@@ -74,7 +79,7 @@
         min="0" max="50" value=0><br>
         <label for="horas100">Hs. extra Sabados , Domingos y Feriados:</label>
         <input type="number" id="horas100" name="horas100"
-        min="0" max="50" value=0>
+        min="0" max="50" value=0><br> 
       </div>
       
       <!-- Agrega todas las opciones correspondientes a bingo  -->
@@ -85,14 +90,14 @@
             <?php foreach($this->sector as $s){ 
               if ($s['Id_Sector'] === '2'){ ?>
               <option value="<?= $s['Id_Categoria'] ?>">  <?= $s['descripcion'] ?>  </option>
-                    <?php } }?>
-        </select><br>
-        <input type='hidden' value='0' name='puntualidad'>
+                    <?php } }?> 
+        </select>
+        <input type='hidden' value='0' name='puntualidad'><br> 
         
         <label><input type="checkbox" id="puntualidad" value="1" name="puntualidad" checked>    Ad. asist y puntualidad</label>
         <br>
         <label for="alimentacion">Dias de Alimentacion (0-31):</label>
-        <input type="number" id="alimentacion" name="alimentacion" min="0" max="31" value="21">
+        <input type="number" id="alimentacion" name="alimentacion" min="0" max="31" value="21"><br> 
       </div>
       <input type='hidden' value='0' name='presentismo'>
       <label for="presentismo"><input type="checkbox" id="presentismo" value="1" name ="presentismo" checked>  Ad. Presentismo</label>
