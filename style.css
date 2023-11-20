@@ -887,3 +887,23 @@
             padding: 10px; /* Espaciado interno */
             margin-bottom: 15px; /* Margen inferior */
         }
+
+/* email */ 
+input[type="email"] {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/* Pseudo-clases para resaltar el input cuando está enfocado o activo */
+input[type="email"]:focus,
+input[type="email"]:active {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#containerLog input[type="password"]{
+    width: auto;
+}

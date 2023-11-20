@@ -7,5 +7,7 @@
   <a href="ActualizarSueldo">Actualizar Sueldo</a>
   <a href="AgregarComunicado">Agregar Comunicado</a>
   <a href="EliminarComunicado">Eliminar un comunicado</a>
+  <a href="AgregarAdmin">Alta Administrador</a>
+  
   <a href="logout" id="admin">Cerrar Sesion</a>
 </div>

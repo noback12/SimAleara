@@ -26,12 +26,13 @@
                        
             <div id="menu">
                     <ul>
-                    <li><a href="Lista-Categorias">Lista Categorias</a></li>
-                    <li><a href="AgregarCategoria">Agregar Categoria</a></li>
-                    <li><a href="EliminarCategoria">Eliminar Categoria</a></li>
-                    <li><a href="ActualizarSueldo">Actualizar Sueldo</a></li>
-                    <li><a href="AgregarComunicado">Agregar Comunicado</a></li>
-                    <li><a href="EliminarComunicado">Eliminar un comunicado</a></li>
+                        <li><a href="Lista-Categorias">Lista Categorias</a></li>
+                        <li><a href="AgregarCategoria">Agregar Categoria</a></li>
+                        <li><a href="EliminarCategoria">Eliminar Categoria</a></li>
+                        <li><a href="ActualizarSueldo">Actualizar Sueldo</a></li>
+                        <li><a href="AgregarComunicado">Agregar Comunicado</a></li>
+                        <li><a href="EliminarComunicado">Eliminar un comunicado</a></li>
+                        <li><a href="AgregarAdmin">Alta Administrador</a></li>
                     </ul>
             </div>
 

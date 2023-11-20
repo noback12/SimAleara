@@ -22,13 +22,17 @@
             <div id="containerLog">
                 <form action="" method="post">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre" value="nombren" required>
+                    &nbsp&nbsp&nbsp <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" value="apellidoa" required><br><br>
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" name="usuario" value="usuariou" required> <br><br>
 
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" placeholder="suEmail@provedor.com" name="email" required>
+                    <input type="email" placeholder="suEmail@provedor.com" name="email" required><br><br>
 
                     <label for="password">Contraseña:</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" required>&nbsp&nbsp&nbsp 
 
                     <label for="confirmar_password">Confirmar Contraseña:</label>
                     <input type="password" name="confirmar_password" id="confirmar_password" required>

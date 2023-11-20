@@ -7,30 +7,31 @@ require '../views/AgregarAdmin.php';
 require '../views/AgregarAdmin2.php';
 require '../views/AltaUsuarioOk.php';
 
-
-    if(isset($_POST['email'])){
-        if ($_POST['password'] !== $_POST['confirmar_password']) {
-            $vAdmin = new AgregarAdmin2();
-        } else {
-       
-            $email = $_POST['email'];
-            $nombre = $_POST['nombre'];
-            $apellido =$_POST['apellido']:
-            $usuario = $_POST['usuario'];
-            $pw =sha1($_POST['password']);
-            $adm = new Administradores();
-           
+session_start();
+//Si inicie sesion acceso
+    if (isset($_SESSION['logueado'])) {
+        if(isset($_POST['email'])  && isset( $_POST['password'] )  ){
+            if ($_POST['password'] !== $_POST['confirmar_password']) {
+                $vAdmin = new AgregarAdmin2();
+            } else {
+                $nombre = $_POST['nombre'];
+                $apellido= $_POST['apellido'];
+                $email = $_POST['email'] ;
+                $usuario = $_POST['usuario'];
+                $pw =sha1($_POST['password']);
+                $adm = new Administradores();
             
-            //$mNuevoUser->Alta($_POST['nombre'],$_POST['apellido'],$_POST['email'],sha1($_POST['contraseña']));
-            echo "Usuario registrado: <br>";
-            echo "Nombre: $nombre <br>";
-            echo "Correo electrónico: $email <br>";
-            echo "PW". $pw;
+                
+                $adm->Alta($nombre,$apellido,$usuario, $email, $pw);
+            
 
-            $vAdmin = new AltaUsuarioOk();}
-    }else{
-    $vAdmin = new AgregarAdmin();
-}
+                $vAdmin = new AltaUsuarioOk();}
+        }else{
+        $vAdmin = new AgregarAdmin();
+    }
 
-    $vAdmin->render();
+        $vAdmin->render();
+    }
+    else {//Sino envio al formulario de inicio de sesion 
+    header("Location: InicioSesion");}
 ?>
